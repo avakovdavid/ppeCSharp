@@ -1,0 +1,1651 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>gsb-application</name>
+    </assembly>
+    <members>
+        <member name="T:gsb_application.frmSaisie">
+            <summary>
+            Classe qui représente le module de saisie d'un prêt
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmSaisie.#ctor">
+            <summary>
+            Constructeur du module de saisie d'un prêt
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmSaisie.getListBox">
+            <summary>
+            Getter de la listBox contenant la liste des utilisateurs
+            </summary>
+            <returns>listBox contenant la liste des utilisateurs</returns>
+        </member>
+        <member name="M:gsb_application.frmSaisie.getTblMat">
+            <summary>
+            Getter du TableLayoutPanel concernant les matériels
+            </summary>
+            <returns>TableLayoutPanel concernant les matériels</returns>
+        </member>
+        <member name="M:gsb_application.frmSaisie.getTblLicDuree">
+            <summary>
+            Getter du TableLayoutPanel concernant les licences de durée
+            </summary>
+            <returns>TableLayoutPanel concernant les licences de durée</returns>
+        </member>
+        <member name="M:gsb_application.frmSaisie.getTblLicVersion">
+            <summary>
+            Getter du TableLayoutPanel concernant les licences de version
+            </summary>
+            <returns>TableLayoutPanel concernant les licences de version</returns>
+        </member>
+        <member name="M:gsb_application.frmSaisie.insertNewFrmMat">
+            <summary>
+            fonction qui permet d'ajouter un formulaire en plus pour un matériel
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmSaisie.insertNewFrmLicDuree">
+            <summary>
+            fonction qui permet d'ajouter un formulaire en plus pour une licence de durée
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmSaisie.insertNewFrmLicVersion">
+            <summary>
+            fonction qui permet d'ajouter un formulaire en plus pour une licence de version
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmSaisie.getListeFrmNvoMat">
+            <summary>
+            Getter de la liste des formulaires pour un nouveau matériel présents sur la page
+            </summary>
+            <returns>liste des formulaires pour un nouveau matériel présents sur la page</returns>
+        </member>
+        <member name="M:gsb_application.frmSaisie.getListeFrmNvlLicDuree">
+            <summary>
+            Getter de la liste des formulaires pour une nouvelle licence de durée présents sur la page
+            </summary>
+            <returns>liste des formulaires pour une nouvelle licence de durée présents sur la page</returns>
+        </member>
+        <member name="M:gsb_application.frmSaisie.getListeFrmNvlLicVersion">
+            <summary>
+            Getter de la liste des formulaires pour une nouvelle licence de version présents sur la page
+            </summary>
+            <returns>liste des formulaires pour une nouvelle licence de version présents sur la page</returns>
+        </member>
+        <member name="M:gsb_application.frmSaisie.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Fonction qui permet d'inserer en plus un formulaire pour un matériel lorsqu'on clique sur le bouton 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmSaisie.button2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Fonction qui permet d'inserer en plus un formulaire pour une nouvelle licence de durée lorsqu'on clique sur le bouton 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmSaisie.button3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Fonction qui permet d'inserer en plus un formulaire pour une licence de version lorsqu'on clique sur le bouton 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmSaisie.chbMateriel_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur coche ou décoche le prêt d'un matériel. Elle permet d'afficher ou de cacher le formulaire concerné 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmSaisie.chbLicDuree_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur coche ou décoche le prêt d'une licence de durée. Elle permet d'afficher ou de cacher le formulaire concerné 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmSaisie.chbLicVersion_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur coche ou décoche le prêt d'une licence de version. Elle permet d'afficher ou de cacher le formulaire concerné 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmSaisie.listBox1_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur clique sur un utilisateur dans la liste. Elle permet d'initialiser la page et enlever les formulaire inutiles 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:gsb_application.frmSaisie.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmSaisie.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.frmSaisie.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:gsb_application.frmNvlLicDuree">
+            <summary>
+            classe qui remprésente le formulaire de saisie pour une licence de durée
+            </summary>
+        </member>
+        <member name="F:gsb_application.frmNvlLicDuree.frmParent">
+            <summary>
+            le Form parent (fenêtre principale)
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmNvlLicDuree.#ctor(gsb_application.frmSaisie)">
+            <summary>
+            constructeur du formulaire
+            </summary>
+            <param name="parent">Form parent (fenêtre principale)</param>
+        </member>
+        <member name="M:gsb_application.frmNvlLicDuree.getPanel">
+            <summary>
+            Getter du panel contenant le formulaire
+            </summary>
+            <returns>panel contenant le formulaire</returns>
+        </member>
+        <member name="M:gsb_application.frmNvlLicDuree.getNum">
+            <summary>
+            Getter du numero de la licence de durée attribué
+            </summary>
+            <returns>numero de la licence de durée attribué (String)</returns>
+        </member>
+        <member name="M:gsb_application.frmNvlLicDuree.getNumMatAssoc">
+            <summary>
+            Getter du numero du matériel associé
+            </summary>
+            <returns>numero du matériel associé (String)</returns>
+        </member>
+        <member name="M:gsb_application.frmNvlLicDuree.btnSupp_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur clique sur le bouton de supression de la licence. 
+            Si la licence a déjà été ajoutée alors dans cette fonction on va accepder à la base de données pour la supprimer, sinon on cache juste le formulaire 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmNvlLicDuree.btnAjouter_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction executée lorsque l'utilisateur valide son formulaire. Elle effectue un enregistrement dans la base de données de cette licence
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:gsb_application.frmNvlLicDuree.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmNvlLicDuree.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.frmNvlLicDuree.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:gsb_application.Aide.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.Aide.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.Aide.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:gsb_application.Administration">
+            <summary>
+            classe qui remprésente le module de création d'un utilisateur
+            </summary>
+        </member>
+        <member name="M:gsb_application.Administration.#ctor">
+            <summary>
+            constructeur de la classe
+            </summary>
+        </member>
+        <member name="M:gsb_application.Administration.rbtnAdmin_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            fonction executée lorsque l'utilisateur souhaite choisi de créer un administrateur. 
+            Elle permet d'aficher le formulaire pour la création d'un nouvel administrateur
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.Administration.rbtnEmploye_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            fonction executée lorsque l'utilisateur souhaite choisi de créer un employé. 
+            Elle permet d'aficher le formulaire pour la création d'un nouvel eployé
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.Administration.btnCreerEmploye_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction executée lorsque l'utilisateur valide la création du nouvel employé. L'utilisateur est alors créé
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.Administration.btnCreerAdmin_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction executée lorsque l'utilisateur valide la création du nouvel administrateur. L'utilisateur est alors créé
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:gsb_application.Administration.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.Administration.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.Administration.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:gsb_application.Profil">
+            <summary>
+            Classe qui représente le module de changement de mot de passe
+            </summary>
+        </member>
+        <member name="M:gsb_application.Profil.#ctor">
+            <summary>
+            constructeur de la classe
+            </summary>
+        </member>
+        <member name="M:gsb_application.Profil.btnValider_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque l'utilisateur valide le formulaire. une modification dans la base de données est alors effectué.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:gsb_application.Profil.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.Profil.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.Profil.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:gsb_application.statistiqueMateriel.#ctor">
+            <summary>
+            Constructeur du module des statistiques sur les matériels 
+            </summary>
+        </member>
+        <member name="F:gsb_application.statistiqueMateriel.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.statistiqueMateriel.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.statistiqueMateriel.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:gsb_application.Marque">
+            <summary>
+            Classe qui modèlise une marque
+            </summary>
+        </member>
+        <member name="F:gsb_application.Marque.id_marque">
+            <summary>
+            identifiant de la marque
+            </summary>
+        </member>
+        <member name="F:gsb_application.Marque.nom_marque">
+            <summary>
+            nom de la marque
+            </summary>
+        </member>
+        <member name="M:gsb_application.Marque.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructeur de la marque
+            </summary>
+            <param name="id">identifiant de la marque</param>
+            <param name="nom">nom de la marque</param>
+        </member>
+        <member name="M:gsb_application.Marque.getIdMarque">
+            <summary>
+            Getter de l'identifiant de la marque
+            </summary>
+            <returns>identifiant de la marque</returns>
+        </member>
+        <member name="M:gsb_application.Marque.getNomMarque">
+            <summary>
+            Getter du nom de la marque
+            </summary>
+            <returns>nom de la marque</returns>
+        </member>
+        <member name="M:gsb_application.Marque.setNomMarque(System.String)">
+            <summary>
+            Setter du nom de la marque
+            </summary>
+            <param name="nom">nouveau nom de la marque</param>
+        </member>
+        <member name="T:gsb_application.frmResume">
+            <summary>
+            Classe qui remprésente le module de résumé des prêts. Il permet de consulter les prêts pour une personne donnée.
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmResume.#ctor">
+            <summary>
+            constructeur de la classe
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmResume.init(System.Int32)">
+            <summary>
+            fonction qui permet d'initialiser certains éléments de l'interface
+            </summary>
+            <param name="id">identifiant de la personne dont ont souhaite afficher le résumé (-1 dans le cas d'un premier affichage où aucune personne n'est encore choisie)</param>
+        </member>
+        <member name="M:gsb_application.frmResume.btnModifLicDuree_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque le bouton de modification d'une licence de durée est cliqué. Permet de faire appel à une boite de dialogue pour modifier les données de la licence de durée
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmResume.btnModifLicVersion_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque le bouton de modification d'une licence de version est cliqué. Permet de faire appel à une boite de dialogue pour modifier les données de la licence de version
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmResume.btnSuppMat_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque le bouton de suppression d'un matériel est cliqué. Permet de supprimer le matériel concerné de la base de données
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmResume.btnSuppLicDuree_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque le bouton de suppression d'une licence de durée est cliqué. Permet de supprimet la licence de durée concernée de la base de données
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmResume.btnSuppLicVersion_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque le bouton de suppression d'une licence de version est cliqué. Permet de supprimer la licence de version concernée de la base de données 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmResume.listBoxQui_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque l'utilisateur change la personne dont il souhate consulter les prêts. Permet de faire appel à la fonction de initialisation
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:gsb_application.frmResume.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmResume.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.frmResume.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:gsb_application.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="T:gsb_application.modifLicVersion">
+            <summary>
+            Classe qui représente la boite de dialogue qui permet de modifier les données d'une licence de version
+            </summary>
+        </member>
+        <member name="F:gsb_application.modifLicVersion.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.modifLicVersion.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.modifLicVersion.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:gsb_application.modifLicVersion.frmAppelant">
+            <summary>
+            la fenêtre de consultation des prêts à partir de laquelle on souhaite modifier une licence de version. (permet par la suite de faire appel à la methode d'initialisation du résumé pour afficher les modification)
+            </summary>
+        </member>
+        <member name="F:gsb_application.modifLicVersion.l">
+            <summary>
+            licence de version qu'on souhaite modifier
+            </summary>
+        </member>
+        <member name="M:gsb_application.modifLicVersion.#ctor(gsb_application.frmResume,System.Int32)">
+            <summary>
+            constructeur de la classe
+            </summary>
+            <param name="frmAppelant">la fenêtre de consultation des prêts à partir de laquelle on souhaite modifier une licence de version</param>
+            <param name="id">identifiant de la licence de version qu'on souhaite modifier</param>
+        </member>
+        <member name="M:gsb_application.modifLicVersion.btnAnnul_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque l'utilisateur souhaite fermer la boite de dialogue. Les modifications dans ce cas là ne sont pas prises en compte
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.modifLicVersion.btnValider_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque l'utilisateur valide ses modifications. 
+            Si tout est correctement rempli et que les modification ont été prises en compte alors la boite de dialogue est fermée est l'affichage du résumé des prêts est mis à jour (initialisé)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:gsb_application.StatistiquesDeLapp.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.StatistiquesDeLapp.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.StatistiquesDeLapp.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:gsb_application.Type_materiel">
+            <summary>
+            Classe qui modèlise le type des matériels
+            </summary>
+        </member>
+        <member name="F:gsb_application.Type_materiel.id_type_materiel">
+            <summary>
+            identifiant du type de matériel
+            </summary>
+        </member>
+        <member name="F:gsb_application.Type_materiel.type_materiel">
+            <summary>
+            nom du type de matériel
+            </summary>
+        </member>
+        <member name="M:gsb_application.Type_materiel.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructeur du type de matériel
+            </summary>
+            <param name="id">identifiant du type de matériel</param>
+            <param name="type_materiel">nom du type de matériel</param>
+        </member>
+        <member name="M:gsb_application.Type_materiel.getIdTypeMateriel">
+            <summary>
+            Getter de l'identifiant du type de matériel
+            </summary>
+            <returns>identifiant du type de matériel</returns>
+        </member>
+        <member name="M:gsb_application.Type_materiel.getTypeMateriel">
+            <summary>
+            Getter du nom du type de matériel
+            </summary>
+            <returns>nom du type de matériel</returns>
+        </member>
+        <member name="M:gsb_application.Type_materiel.setTypeMateriel(System.String)">
+            <summary>
+            Setter du nom du type de matériel
+            </summary>
+            <param name="type">nouveu nom du type de matériel</param>
+        </member>
+        <member name="T:gsb_application.Materiel">
+            <summary>
+            Classe qui modèlise un matériel
+            </summary>
+        </member>
+        <member name="F:gsb_application.Materiel.id_materiel">
+            <summary>
+            identifiant du matériel
+            </summary>
+        </member>
+        <member name="F:gsb_application.Materiel.date_circulation">
+            <summary>
+            date de mise en circulation du matériel
+            </summary>
+        </member>
+        <member name="F:gsb_application.Materiel.garantie">
+            <summary>
+            nombre d'années de garantie du matériel
+            </summary>
+        </member>
+        <member name="F:gsb_application.Materiel.personne">
+            <summary>
+            personne à qui ce matériel est prêté
+            </summary>
+        </member>
+        <member name="F:gsb_application.Materiel.marque">
+            <summary>
+            marque du matériel
+            </summary>
+        </member>
+        <member name="F:gsb_application.Materiel.type">
+            <summary>
+            type du matériel
+            </summary>
+        </member>
+        <member name="M:gsb_application.Materiel.#ctor(System.Int32,System.DateTime,System.Int32,gsb_application.Personne,gsb_application.Marque,gsb_application.Type_materiel)">
+            <summary>
+            Constructeur du matériel
+            </summary>
+            <param name="id">identifiant du matériel</param>
+            <param name="date_circulation">date de mise en circulation du matériel</param>
+            <param name="garantie">nombre d'années de garantie du matériel</param>
+            <param name="p">personne à qui ce matériel est prêté</param>
+            <param name="m">marque du matériel</param>
+            <param name="t">type du matériel</param>
+        </member>
+        <member name="M:gsb_application.Materiel.getIdMateriel">
+            <summary>
+            Getter de l'indentifiant du matériel
+            </summary>
+            <returns>identifiant du matériel</returns>
+        </member>
+        <member name="M:gsb_application.Materiel.getDateCirculation">
+            <summary>
+            Getter de la date de mise en circulation du matériel
+            </summary>
+            <returns>date de mise en circulation du matériel</returns>
+        </member>
+        <member name="M:gsb_application.Materiel.getGarantie">
+            <summary>
+            Getter du nombre d'années de garantie du matériel
+            </summary>
+            <returns>nombre d'années de garantie du matériel</returns>
+        </member>
+        <member name="M:gsb_application.Materiel.getPersonne">
+            <summary>
+            Getter de la personne à qui ce matériel est prêté
+            </summary>
+            <returns>personne à qui ce matériel est prêté</returns>
+        </member>
+        <member name="M:gsb_application.Materiel.getMarque">
+            <summary>
+            Getter de la marque du matériel
+            </summary>
+            <returns>marque du matériel</returns>
+        </member>
+        <member name="M:gsb_application.Materiel.getType">
+            <summary>
+            Getter du type du matériel
+            </summary>
+            <returns>type du matériel</returns>
+        </member>
+        <member name="M:gsb_application.Materiel.setDateCirculation(System.DateTime)">
+            <summary>
+            Setter de la date de mise en circulation du matériel
+            </summary>
+            <param name="dateCirculation">nouvelle date de mise en circulation du matériel</param>
+        </member>
+        <member name="M:gsb_application.Materiel.setGarantie(System.Int32)">
+            <summary>
+            Setter du nombre d'années de garantie du matériel
+            </summary>
+            <param name="garantie">nouveau nombre d'années de garantie du matériel</param>
+        </member>
+        <member name="M:gsb_application.Materiel.setType(gsb_application.Type_materiel)">
+            <summary>
+            Setter du type du matériel
+            </summary>
+            <param name="type">nouveau type du matériel</param>
+        </member>
+        <member name="T:gsb_application.Licence">
+            <summary>
+            Classe qui modélise les licences. (il y a deux types de licences)
+            </summary>
+        </member>
+        <member name="F:gsb_application.Licence.id_licence">
+            <summary>
+            L'identifiant de la licence
+            </summary>
+        </member>
+        <member name="F:gsb_application.Licence.personne">
+            <summary>
+            La personne qui possède cette licence
+            </summary>
+        </member>
+        <member name="F:gsb_application.Licence.materiel">
+            <summary>
+            Le matériel associé à cette licence
+            </summary>
+        </member>
+        <member name="M:gsb_application.Licence.#ctor(System.Int32,gsb_application.Personne,gsb_application.Materiel)">
+            <summary>
+            Premier constructeur de Licence
+            </summary>
+            <param name="id">identifiant de la licence</param>
+            <param name="p">personne qui possède la licence</param>
+            <param name="m">matériel associé à la licence</param>
+        </member>
+        <member name="M:gsb_application.Licence.#ctor(System.Int32,gsb_application.Personne)">
+            <summary>
+            Deuxième constructeur de Licence
+            </summary>
+            <param name="id">identifiant de la licence</param>
+            <param name="p">personne qui possède la licence</param>
+        </member>
+        <member name="M:gsb_application.Licence.getIdLicence">
+            <summary>
+            Getter de l'identifiant de la licence
+            </summary>
+            <returns>identifiant de la licence</returns>
+        </member>
+        <member name="M:gsb_application.Licence.getPersonne">
+            <summary>
+            Getter de la personne qui possède la licence
+            </summary>
+            <returns>personne qui possède la licence</returns>
+        </member>
+        <member name="M:gsb_application.Licence.getMateriel">
+            <summary>
+            Getter du matériel associé à la licence
+            </summary>
+            <returns>matériel associé à la licence</returns>
+        </member>
+        <member name="T:gsb_application.modifLicDuree">
+            <summary>
+            Classe qui représente la boite de dialogue qui permet de modifier les données d'une licence de version
+            </summary>
+        </member>
+        <member name="F:gsb_application.modifLicDuree.frmAppelant">
+            <summary>
+            la fenêtre de consultation des prêts à partir de laquelle on souhaite modifier une licence de durée. (permet par la suite de faire appel à la methode d'initialisation du résumé pour afficher les modification)
+            </summary>
+        </member>
+        <member name="F:gsb_application.modifLicDuree.l">
+            <summary>
+            licence de durée qu'on souhaite modifier
+            </summary>
+        </member>
+        <member name="M:gsb_application.modifLicDuree.#ctor(gsb_application.frmResume,System.Int32)">
+            <summary>
+            constructeur de la classe
+            </summary>
+            <param name="frmAppelant">la fenêtre de consultation des prêts à partir de laquelle on souhaite modifier une licence de durée</param>
+            <param name="id">identifiant de la licence de durée qu'on souhaite modifier</param>
+        </member>
+        <member name="M:gsb_application.modifLicDuree.btnAnnul_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque l'utilisateur souhaite fermer la boite de dialogue. Les modifications dans ce cas là ne sont pas prises en compte
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.modifLicDuree.btnValider_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque l'utilisateur valide ses modifications. 
+            Si tout est correctement rempli et que les modification ont été prises en compte alors la boite de dialogue est fermée est l'affichage du résumé des prêts est mis à jour (initialisé)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:gsb_application.modifLicDuree.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.modifLicDuree.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.modifLicDuree.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:gsb_application.Type_personne">
+            <summary>
+            Classe qui modèlise le type des personnes
+            </summary>
+        </member>
+        <member name="F:gsb_application.Type_personne.id_type_personne">
+            <summary>
+            identifiant du type de personne
+            </summary>
+        </member>
+        <member name="F:gsb_application.Type_personne.type_personne">
+            <summary>
+            nom du type de personne
+            </summary>
+        </member>
+        <member name="M:gsb_application.Type_personne.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructeur du type de personne
+            </summary>
+            <param name="id">identifiant du type de personne</param>
+            <param name="type">nom du type de personne</param>
+        </member>
+        <member name="M:gsb_application.Type_personne.getIdTypePersonne">
+            <summary>
+            Getter de l'identifiant du type de personne
+            </summary>
+            <returns>identifiant du type de personne</returns>
+        </member>
+        <member name="M:gsb_application.Type_personne.getTypePersonne">
+            <summary>
+            Getter du nom du type de personne
+            </summary>
+            <returns>nom du type de personne</returns>
+        </member>
+        <member name="T:gsb_application.Personne">
+            <summary>
+            Classe qui modèlise une personne
+            </summary>
+        </member>
+        <member name="F:gsb_application.Personne.id_personne">
+            <summary>
+            identifiant de la personne
+            </summary>
+        </member>
+        <member name="F:gsb_application.Personne.nom_personne">
+            <summary>
+            nom de la personne
+            </summary>
+        </member>
+        <member name="F:gsb_application.Personne.prenom_personne">
+            <summary>
+            prénom de la personne
+            </summary>
+        </member>
+        <member name="F:gsb_application.Personne.mdp_personne">
+            <summary>
+            mot de passe de la personne (crypté avec MD5)
+            </summary>
+        </member>
+        <member name="F:gsb_application.Personne.login_personne">
+            <summary>
+            login de la personne
+            </summary>
+        </member>
+        <member name="F:gsb_application.Personne.mail_personne">
+            <summary>
+            adresse mail de la personne
+            </summary>
+        </member>
+        <member name="F:gsb_application.Personne.administrateur">
+            <summary>
+            la personne est-elle administrateur ? <c>0</c> : non <c>1</c> : oui
+            </summary>
+        </member>
+        <member name="F:gsb_application.Personne.type_personne">
+            <summary>
+            le type de la personne
+            </summary>
+        </member>
+        <member name="M:gsb_application.Personne.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int32,gsb_application.Type_personne)">
+            <summary>
+            Constructeur de la personne
+            </summary>
+            <param name="id">identifiant de la personne</param>
+            <param name="nom">nom de la personne</param>
+            <param name="prenom">prenom de la personne</param>
+            <param name="mdp">mot de passe de la personne (crypté avec MD5)</param>
+            <param name="login">login de la personne</param>
+            <param name="mail">adresse mail de la personne</param>
+            <param name="admin">la personne est-elle administrateur ? <c>0</c> : non <c>1</c> : oui</param>
+            <param name="type">type de la personne</param>
+        </member>
+        <member name="M:gsb_application.Personne.getIdPersonne">
+            <summary>
+            Getter de l'identifiant de la personne
+            </summary>
+            <returns>identifiant de la personne</returns>
+        </member>
+        <member name="M:gsb_application.Personne.getNomPersonne">
+            <summary>
+            Getter du nom de la personne
+            </summary>
+            <returns>nom de la personne</returns>
+        </member>
+        <member name="M:gsb_application.Personne.getPrenomPersonne">
+            <summary>
+            Getter du prénom de la personne 
+            </summary>
+            <returns>prénom de la personne</returns>
+        </member>
+        <member name="M:gsb_application.Personne.getMdpPersonne">
+            <summary>
+            Getter du mot de passe de la personne
+            </summary>
+            <returns>mot de passe de la personne (crypté avec MD5)</returns>
+        </member>
+        <member name="M:gsb_application.Personne.getLoginPersonne">
+            <summary>
+            Getter du login de la personne
+            </summary>
+            <returns>login de la personne</returns>
+        </member>
+        <member name="M:gsb_application.Personne.getMailPersonne">
+            <summary>
+            Getter de l'adresse mail de la personne
+            </summary>
+            <returns>adresse mail de la personne</returns>
+        </member>
+        <member name="M:gsb_application.Personne.getAdministrateur">
+            <summary>
+            Getter de la valeur indiquand si la personne est un administrateur ou pas. 
+            </summary>
+            <returns><c>0</c> : non <c>1</c> : oui</returns>
+        </member>
+        <member name="M:gsb_application.Personne.getTypePersonne">
+            <summary>
+            Getter du type de la personne
+            </summary>
+            <returns>type de la personne</returns>
+        </member>
+        <member name="M:gsb_application.Personne.setMdpPersonne(System.String)">
+            <summary>
+            Setter du mot de passe de la personne
+            </summary>
+            <param name="mdp">nouveau mot de passe de la personne (crypté avec MD5)</param>
+        </member>
+        <member name="M:gsb_application.Personne.toMD5(System.String)">
+            <summary>
+            Fonction qui permet de crypter une chaine de caractères avec MD5
+            </summary>
+            <param name="strText">chaine de caractères à crypter</param>
+            <returns>chaine cryptée de 32 caractères</returns>
+        </member>
+        <member name="T:gsb_application.frmNvoMat">
+            <summary>
+            classe designer pour le formulaire d'un nouveau matériel
+            </summary>
+        </member>
+        <member name="F:gsb_application.frmNvoMat.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmNvoMat.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.frmNvoMat.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:gsb_application.frmNvoMat.frmParent">
+            <summary>
+            formulaire de saisie parent, c'est à dire celui où sera implémenté le formulaire pour un nouveau matériel
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmNvoMat.#ctor(gsb_application.frmSaisie)">
+            <summary>
+            Constructeur du formulaire pour un nouveau matériel
+            </summary>
+            <param name="parent">formulaire de saisie où sera implémenté le formulaire pour un nouveau matériel</param>
+        </member>
+        <member name="M:gsb_application.frmNvoMat.getPanel">
+            <summary>
+            Getter du panel dans lequel est placé le formulaire pour un nouveau matériel (ce getter est utilisé pour récupèrer le formulaire pour un nouveau matériel et l'implémenter dans le formulaire de saisie)
+            </summary>
+            <returns>panel qui contient le formulaire pour un nouveau matériel</returns>
+        </member>
+        <member name="M:gsb_application.frmNvoMat.getNum">
+            <summary>
+            Getter du numero du matériel attribué
+            </summary>
+            <returns>numero du matériel attribué (String)</returns>
+        </member>
+        <member name="M:gsb_application.frmNvoMat.btnSupp_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur clique sur le bouton de supression du matériel
+            Si le matériel a déjà été ajouté alors dans cette fonction on va accepder à la base de données pour le supprimer, sinon on cache juste le formulaire 
+            Les licences de version qui sont associées à ce matériel seront également supprimées.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmNvoMat.btnAjouter_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction executée lorsque l'utilisateur valide son formulaire. Elle effectue un enregistrement de ce matériel dans la base de données
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:gsb_application.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:gsb_application.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:gsb_application.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+        <member name="T:gsb_application.Licence_duree">
+            <summary>
+            Classe qui modèlise les licences de durée (hérite de la classe Licence)
+            </summary>
+        </member>
+        <member name="F:gsb_application.Licence_duree.nom_version">
+            <summary>
+            nom de la licence 
+            </summary>
+        </member>
+        <member name="F:gsb_application.Licence_duree.debut_licence">
+            <summary>
+            date du début de la licence
+            </summary>
+        </member>
+        <member name="F:gsb_application.Licence_duree.duree_licence">
+            <summary>
+            durée de la licence (en années)
+            </summary>
+        </member>
+        <member name="M:gsb_application.Licence_duree.#ctor(System.Int32,System.String,System.DateTime,System.Int32,gsb_application.Personne,gsb_application.Materiel)">
+            <summary>
+            Premier constructeur de la licence de durée (dans le cas où elle est associée à un matériel)
+            </summary>
+            <param name="id">identifiant de la licence</param>
+            <param name="nom">nom de la licence</param>
+            <param name="date_debut">date du début de la licence</param>
+            <param name="duree">duree de la licence (en années)</param>
+            <param name="p">personne à qui cette licence est prêtée</param>
+            <param name="m">matériel au quelle cette licence est associée</param>
+        </member>
+        <member name="M:gsb_application.Licence_duree.#ctor(System.Int32,System.String,System.DateTime,System.Int32,gsb_application.Personne)">
+            <summary>
+            Deuxième constructeur de la licence de durée (dans le cas où elle n'est associée à aucun matériel)
+            </summary>
+            <param name="id">identifiant de la licence</param>
+            <param name="nom">nom de la licence</param>
+            <param name="date_debut">date du début de la licence</param>
+            <param name="duree">duree de la licence (en années)</param>
+            <param name="p">personne à qui cette licence est prêtée</param>
+        </member>
+        <member name="M:gsb_application.Licence_duree.getNomVersion">
+            <summary>
+            Getter du nom de la licence
+            </summary>
+            <returns>nom de la licence</returns>
+        </member>
+        <member name="M:gsb_application.Licence_duree.getDebutLicence">
+            <summary>
+            Getter de la date du début de la licence
+            </summary>
+            <returns>date du début de la licence</returns>
+        </member>
+        <member name="M:gsb_application.Licence_duree.getDureeLicence">
+            <summary>
+            Getter de la durée de la licence
+            </summary>
+            <returns>durée de la licence</returns>
+        </member>
+        <member name="T:gsb_application.frmConnect">
+            <summary>
+            classe designer pour le formulaire de connexion
+            </summary>
+        </member>
+        <member name="F:gsb_application.frmConnect.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmConnect.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.frmConnect.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmConnect.#ctor">
+            <summary>
+            classe qui modèlise la fenêtre de connection
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmConnect.btnConnexion_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur clique sur le bouton de connection ou la touche "Enter".
+            Elle permet de vérifier si les identifiants entrés correspondent à ceux dans la base de données et prépare la fenêtre principale si la personne est identifiée
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmConnect.btnConnexion_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur appuie sur la touche.
+            Si c'est la touche "Enter" alors on fait appel à la fonction de connection
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:gsb_application.Mysql">
+            <summary>
+            Classe qui représente la connexion à la base de données (permet la communication entre l'application et la base de données)
+            </summary>
+        </member>
+        <member name="F:gsb_application.Mysql.connectionString">
+            <summary>
+            La chaine de connexion à la base de données
+            </summary>
+        </member>
+        <member name="F:gsb_application.Mysql.connexion">
+            <summary>
+            représente la connexion à la base de données mysql
+            </summary>
+        </member>
+        <member name="M:gsb_application.Mysql.#ctor">
+            <summary>
+            Constructeur de la connexion
+            </summary>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesTypePersonne">
+            <summary>
+            Getter de tous les types de personne 
+            </summary>
+            <returns>liste des types de personne</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesPersonne">
+            <summary>
+            Getter de toutes les personnes
+            </summary>
+            <returns>liste de toutes les personnes</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesTypeMateriel">
+            <summary>
+            Getter de tous les types de matériel
+            </summary>
+            <returns>liste de tous les types de matériel</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesMarque">
+            <summary>
+            Getter de toutes les marques
+            </summary>
+            <returns>liste de toutes les marques</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesMateriel">
+            <summary>
+            Getter de tous les matériels
+            </summary>
+            <returns>liste de tous les matériels</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesMateriel(System.Int32)">
+            <summary>
+            Getter de tous les matériels concernant une seule personne
+            </summary>
+            <param name="idPersonne">identifiant de la personne dont on veut avoir les matériel qu'elle a emprunté</param>
+            <returns>liste des matériels</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesLicenceDuree">
+            <summary>
+            Getter de toutes les licences de durée
+            </summary>
+            <returns>liste de toutes les licences de durée</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesLicenceDuree(System.Int32)">
+            <summary>
+            Getter de toutes les licences de durée concernant une seule personne
+            </summary>
+            <param name="id">identifiant de la personne dont on souhaite connaître les licences de durée qu'elle a emprunté</param>
+            <returns>liste des licences de durée</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesLicenceDuree(System.Int32,System.Int32)">
+            <summary>
+            Getter de toutes les licences de durée concernant une personne et qui sont associées à un matériel
+            </summary>
+            <param name="id">identifiant de la personne dont on souhaite connaître les licences de durée qu'elle a emprunté</param>
+            <param name="idMat">identifiant du matériel pour lequel on souhaite avoir les licences de durée associées</param>
+            <returns>liste des licences de durée</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLicenceDuree(System.Int32)">
+            <summary>
+            Fonction qui permet de récupèrer depuis la base de données la licence de durée dont l'identifiant est passé en paramètres
+            </summary>
+            <param name="id">identifiant de la licence de durée qu'on souhaite avoir</param>
+            <returns>licence de durée</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.updateLicenceDuree(System.Collections.Hashtable)">
+            <summary>
+            fonction qui permet de mettre à jour une licence de durée dans la base de données.
+            </summary>
+            <param name="ht">tableau associatif qui contient toutes les données nécessaires</param>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesLicenceVersion">
+            <summary>
+            Getter de toutes les licences de version
+            </summary>
+            <returns>liste de toutes les licences de version</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesLicenceVersion(System.Int32)">
+            <summary>
+            Getter de toutes les licences de version concernant une seule personne
+            </summary>
+            <param name="id">identifiant de la personne dont on souhaite connaître les licences de version qu'elle a emprunté</param>
+            <returns>liste des licences de version</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesLicenceVersion(System.Int32,System.Int32)">
+            <summary>
+            Getter de toutes les licences de version concernant une personne et qui sont associées à un matériel
+            </summary>
+            <param name="id">identifiant de la personne dont on souhaite connaître les licences de version qu'elle a emprunté</param>
+            <param name="idMat">identifiant du matériel pour lequel on souhaite avoir les licences de version associées</param>
+            <returns>liste des licences de version</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLicenceVersion(System.Int32)">
+            <summary>
+            Fonction qui permet de récupèrer depuis la base de données la licence de version dont l'identifiant est passé en paramètres
+            </summary>
+            <param name="id">identifiant de la licence de version qu'on souhaite avoir</param>
+            <returns>licence de version</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.updateLicenceVersion(System.Collections.Hashtable)">
+            <summary>
+            fonction qui permet de mettre à jour une licence de version dans la base de données.
+            </summary>
+            <param name="ht">tableau associatif qui contient toutes les données nécessaires</param>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesStatMateriel">
+            <summary>
+            Getter des matériels qui ont plus de 5 ans d'ancienneté 
+            </summary>
+            <returns>liste des matériels de plus de 5 ans d'ancienneté</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.getLesStatLicence">
+            <summary>
+            Getter des licences qui expirent dans moins de 15 jours
+            </summary>
+            <returns>liste des licences qui expirent dans moins de 15 jours</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.seConnecter(System.String,System.String)">
+            <summary>
+            Fonction de connexion de l'utilisateur. Elle vérifie si le login et le mot de passe sont valides et que la personne a le droit de se connecter à l'application
+            </summary>
+            <param name="login">login de la personne</param>
+            <param name="mdp">mot de passe de la personne (non crypté, le cryptage se fait lors de la vérification)</param>
+            <returns>objet de type Personne qui vient de se connecter</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.creerUtilisateur(System.Collections.Hashtable,System.Boolean)">
+            <summary>
+            Fonction qui permet de créer un nouvel utilisateur (que ça soit administrateur ou employé normal)
+            </summary>
+            <param name="ht">tableau associatif qui contient toutes les données pour la création de l'utilisateur.
+            Pour un administrateur : 
+            <code>
+            ht["nom"]; ht["prenom"]; ht["email"]; ht["login"]; ht["mdp"]; ht["mdpC"];
+            </code>
+            Pour un employé : 
+            <code>
+            ht["nom"].Equals("") || ht["prenom"].Equals("") || ht["email"]
+            </code>
+            </param>
+            <param name="admin">Est-ce un administrateur ? <c>true</c> : oui <c>false</c> : non</param>
+            <returns><c>true</c> si la création a réussi ou une exception si la création a échoué</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.changerMdp(gsb_application.Personne,System.String,System.String,System.String)">
+            <summary>
+            Fonction qui effectue un changement de mot de passe d'un utilisateur dans la base de données
+            </summary>
+            <param name="p">personne qui souhaite changer son mot de passe (ou personne le mot de passe de laquelle on souhaite changer)</param>
+            <param name="mdp">mot de passe actuel de la personne (non crypté)</param>
+            <param name="nvoMdp">nouveau mot de passe de la personne (non crypté)</param>
+            <param name="nvoMdpConfirm">la confirmation du nouveau mot de passe (non crypté)</param>
+            <returns><c>true</c> si la création a réussi et crée une exception si la création a échoué</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.ajouterMateriel(System.Collections.Hashtable)">
+            <summary>
+            Fonction qui permet d'ajouter un prêt de matériel dans la base de données 
+            </summary>
+            <param name="ht">tableau associatif qui contient toutes les donnée pour l'ajout : 
+            <code>
+            ht["date"]; ht["garantie"]; ht["id_pers"]; ht["marque"]; ht["type"];
+            </code>
+            </param>
+            <returns>identifiant du matériel qui vient d'être ajouté dans la base de données, ou un exception si l'ajout a échoué</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.ajouterLicDuree(System.Collections.Hashtable)">
+            <summary>
+            Fonction qui permet d'ajouter une licence de durée
+            </summary>
+            <param name="ht">tableau associatif qui contient toutes les donnée pour l'ajout : 
+            <code>
+            ht["nom"]; ht["date"]; ht["duree"]; ht["id_pers"]; ht["numMatAssoc"]
+            </code>
+            </param>
+            <returns>identifiant de la licence de durée qui vient d'être ajouté dans la base de données, ou un exception si l'ajout a échoué</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.ajouterLicVersion(System.Collections.Hashtable)">
+            <summary>
+            Fonction qui permet d'ajouter une licence de version
+            </summary>
+            <param name="ht">tableau associatif qui contient toutes les donnée pour l'ajout : 
+            <code>
+            ht["nom"]; ht["id_pers"]; ht["numMatAssoc"]
+            </code>
+            </param>
+            <returns>identifiant de la licence de version qui vient d'être ajoutée dans la base de données, ou un exception si l'ajout a échoué</returns>
+        </member>
+        <member name="M:gsb_application.Mysql.suppMateriel(System.Int32)">
+            <summary>
+            Fonction qui permet de supprimer un matériel dans la base de données
+            </summary>
+            <param name="id">identifiant du matériel à supprimer </param>
+        </member>
+        <member name="M:gsb_application.Mysql.suppLicDuree(System.Int32)">
+            <summary>
+            Fonction qui permet de supprimet une licence de durée dans la base de données
+            </summary>
+            <param name="id">identifiant de la licence de durée</param>
+        </member>
+        <member name="M:gsb_application.Mysql.suppLicVersion(System.Int32)">
+            <summary>
+            Fonction qui permet de supprimet une licence de version dans la base de données
+            </summary>
+            <param name="id">identifiant de la licence de version</param>
+        </member>
+        <member name="M:gsb_application.Mysql.toMD5(System.String)">
+            <summary>
+            Fonction qui permet de crypter une chaine de caractères avec MD5
+            </summary>
+            <param name="strText">chaine de caractères à crypter</param>
+            <returns>chaine cryptée de 32 caractères</returns>
+        </member>
+        <member name="T:gsb_application.MainWindows">
+            <summary>
+            Classe qui représente la fenêtre principale de l'application
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.MainWindows.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.MainWindows.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.persConnect">
+            <summary>
+            personne qui est connectée sur l'application en ce moment
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.profil">
+            <summary>
+            module profil de l'application
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.administration">
+            <summary>
+            module administration de l'application
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.frmConnect">
+            <summary>
+            fenêtre de connection de l'application
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.aide">
+            <summary>
+            fenêtre d'aide
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.frmSaisie">
+            <summary>
+            module de saisie d'un prêt
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.statistiqueDeLapp">
+            <summary>
+            module de statistiques sur l'application
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.frmResume">
+            <summary>
+            module de consultation des prêts
+            </summary>
+        </member>
+        <member name="F:gsb_application.MainWindows.statistiqueMateriel">
+            <summary>
+            module de statistiques sur les matériels
+            </summary>
+        </member>
+        <member name="M:gsb_application.MainWindows.#ctor">
+            <summary>
+            Constructeur de la classe 
+            </summary>
+        </member>
+        <member name="M:gsb_application.MainWindows.init">
+            <summary>
+            fonction qui permet d'initialiser la fenêtre principale de l'application
+            </summary>
+        </member>
+        <member name="M:gsb_application.MainWindows.getPersConnect">
+            <summary>
+            Getter pour la personne connectée actuellement sur l'application
+            </summary>
+            <returns>personne connectée actuellement sur l'application</returns>
+        </member>
+        <member name="M:gsb_application.MainWindows.setPersConnect(System.Object)">
+            <summary>
+            Setter pour la personne connectée (qui vient de se connecter
+            </summary>
+            <param name="p">personne qui vient de se connecter</param>
+        </member>
+        <member name="M:gsb_application.MainWindows.getSeDeconnecter">
+            <summary>
+            Getter de l'item "se deconnecter" du menu
+            </summary>
+            <returns>l'item "se deconnecter" du menu</returns>
+        </member>
+        <member name="M:gsb_application.MainWindows.getSeConnecter">
+            <summary>
+            Getter de l'item "se connecter" du menu
+            </summary>
+            <returns>l'item "se connecter" du menu</returns>
+        </member>
+        <member name="M:gsb_application.MainWindows.getQuiter">
+            <summary>
+            Getter de l'item "quiter" du menu
+            </summary>
+            <returns>l'item "quiter" du menu</returns>
+        </member>
+        <member name="M:gsb_application.MainWindows.getAdministration">
+            <summary>
+            Getter de l'item "administration" du menu
+            </summary>
+            <returns>l'item "administration" du menu</returns>
+        </member>
+        <member name="M:gsb_application.MainWindows.getProfil">
+            <summary>
+            Getter de l'item "profil" du menu
+            </summary>
+            <returns>l'item "profil" du menu</returns>
+        </member>
+        <member name="M:gsb_application.MainWindows.getLesPretsItem">
+            <summary>
+            Getter de l'item "consulter les prêts" du menu
+            </summary>
+            <returns>l'item "consulter les prêts" du menu</returns>
+        </member>
+        <member name="M:gsb_application.MainWindows.getStatistiques">
+            <summary>
+            Getter de l'item "statistiques" du menu
+            </summary>
+            <returns>l'item "sttistiques" du menu</returns>
+        </member>
+        <member name="M:gsb_application.MainWindows.créerUnUtilisateurToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'appeller le module de création d'un nouvel utilisateur lorsqu'on clique dessus dans le menu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.changerDeMotDePasseToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'appeller le module de changement de mot de passe lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.quitterToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet de quiter l'application lorsqu'on clique sur l'iteme corespondante dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.seConnecterToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'appeller le module de connection lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.seDeconnecterToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet de se déconnecter lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.statistiquesToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'appeller le module de statistiques de l'application lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.nouveauPrêtToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'appeller le module de saisie des prêts lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.consulterLesPrêtsToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'appeller le module de consultation des prêts lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.manuelDutilisationToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'appeller le manuel d'utilisation de l'application lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.statistiqueDesMateriauxToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'afficher le module des statistiques sur les matériels lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.affToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui permet d'afficher le module des statistiques de l'application lorsqu'on clique dessus dans le munu ou à partir d'un racourci
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.MainWindows.evenementClavier_KeyPress(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            fonction qui gère les racourcis clavier 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:gsb_application.Licence_version">
+            <summary>
+            Classe qui modèlise les licences de version (hérite de la classe Licence)
+            </summary>
+        </member>
+        <member name="F:gsb_application.Licence_version.nom_version">
+            <summary>
+            nom de la licence
+            </summary>
+        </member>
+        <member name="M:gsb_application.Licence_version.#ctor(System.Int32,System.String,gsb_application.Personne,gsb_application.Materiel)">
+            <summary>
+            Premier constructeur de la licence de version (dans le cas où elle est associée à un matériel)
+            </summary>
+            <param name="id">identifiant de la licence</param>
+            <param name="nom">nom de la licence</param>
+            <param name="p">personne à qui la licence est prêtée</param>
+            <param name="m">matériel auquel la licence est associée</param>
+        </member>
+        <member name="M:gsb_application.Licence_version.#ctor(System.Int32,System.String,gsb_application.Personne)">
+            <summary>
+            Deuxième constructeur de la licence de version (dans le cas où elle n'est associée à aucun matériel)
+            </summary>
+            <param name="id">identifiant de la licence</param>
+            <param name="nom">nom de la licence</param>
+            <param name="p">personne à qui la licence est prêtée</param>
+        </member>
+        <member name="M:gsb_application.Licence_version.getNomVersion">
+            <summary>
+            Getter du nom de la licence
+            </summary>
+            <returns>nom de la licence</returns>
+        </member>
+        <member name="T:gsb_application.frmNvlLicVersion">
+            <summary>
+            classe qui remprésente le formulaire de saisie pour une licence de version
+            </summary>
+        </member>
+        <member name="F:gsb_application.frmNvlLicVersion.frmParent">
+            <summary>
+            le Form parent (fenêtre principale)
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmNvlLicVersion.#ctor(gsb_application.frmSaisie)">
+            <summary>
+            constructeur du formulaire
+            </summary>
+            <param name="parent">Form parent (fenêtre principale)</param>
+        </member>
+        <member name="M:gsb_application.frmNvlLicVersion.getPanel">
+            <summary>
+            Getter du panel contenant le formulaire
+            </summary>
+            <returns>panel contenant le formulaire</returns>
+        </member>
+        <member name="M:gsb_application.frmNvlLicVersion.getNum">
+            <summary>
+            Getter du numero de la licence de version attribué
+            </summary>
+            <returns>numero de la licence de version attribué (String)</returns>
+        </member>
+        <member name="M:gsb_application.frmNvlLicVersion.getNumMatAssoc">
+            <summary>
+            Getter du numero du matériel associé
+            </summary>
+            <returns>numero du matériel associé (String)</returns>
+        </member>
+        <member name="M:gsb_application.frmNvlLicVersion.btnSupp_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est executée lorsque l'utilisateur clique sur le bouton de supression de la licence. 
+            Si la licence a déjà été ajoutée alors dans cette fonction on va accepder à la base de données pour la supprimer, sinon on cache juste le formulaire 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.frmNvlLicVersion.btnAjouter_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction executée lorsque l'utilisateur valide son formulaire. Elle effectue un enregistrement dans la base de données de cette licence
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:gsb_application.frmNvlLicVersion.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.frmNvlLicVersion.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.frmNvlLicVersion.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+    </members>
+</doc>

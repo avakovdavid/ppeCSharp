@@ -1,0 +1,27 @@
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.Properties.Resources.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb-application.csproj.GenerateResource.Cache
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\gsb-application.exe.config
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\gsb-application.exe
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\gsb-application.pdb
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb-application.exe
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb-application.pdb
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.frmConnect.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.MainWindows.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.Administration.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.Profil.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.frmResume.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.frmSaisie.resources
+C:\Documents and Settings\david\Mes documents\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\gsb-application.exe.config
+C:\Documents and Settings\david\Mes documents\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb-application.exe
+C:\Documents and Settings\david\Mes documents\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb-application.pdb
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.frmNvoMat.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.statistiqueMateriel.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.StatistiquesDeLapp.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.frmNvlLicDuree.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.frmNvlLicVersion.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.Aide.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.modifLicDuree.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.modifLicVersion.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\MySql.Data.dll
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\gsb-application.XML
