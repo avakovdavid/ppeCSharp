@@ -105,9 +105,9 @@ namespace gsb_application
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(193, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "* Quoi : ";
+            this.label1.Text = "Quoi * ";
             // 
             // chbLicVersion
             // 
@@ -147,9 +147,9 @@ namespace gsb_application
             this.lblQui.AutoSize = true;
             this.lblQui.Location = new System.Drawing.Point(23, 35);
             this.lblQui.Name = "lblQui";
-            this.lblQui.Size = new System.Drawing.Size(39, 13);
+            this.lblQui.Size = new System.Drawing.Size(30, 13);
             this.lblQui.TabIndex = 0;
-            this.lblQui.Text = "* Qui : ";
+            this.lblQui.Text = "Qui *";
             // 
             // grpBoxMateriel
             // 
@@ -175,20 +175,22 @@ namespace gsb_application
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(570, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "n° attribué : ";
+            this.label2.Text = "n° attribué ";
             // 
             // lblAction
             // 
             this.lblAction.AutoSize = true;
+            this.lblAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAction.Location = new System.Drawing.Point(509, 52);
             this.lblAction.Name = "lblAction";
-            this.lblAction.Size = new System.Drawing.Size(46, 13);
+            this.lblAction.Size = new System.Drawing.Size(47, 13);
             this.lblAction.TabIndex = 12;
-            this.lblAction.Text = "Action : ";
+            this.lblAction.Text = "Action ";
             // 
             // button1
             // 
@@ -206,38 +208,42 @@ namespace gsb_application
             // lblGarantie
             // 
             this.lblGarantie.AutoSize = true;
+            this.lblGarantie.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGarantie.Location = new System.Drawing.Point(446, 52);
             this.lblGarantie.Name = "lblGarantie";
-            this.lblGarantie.Size = new System.Drawing.Size(63, 13);
+            this.lblGarantie.Size = new System.Drawing.Size(64, 13);
             this.lblGarantie.TabIndex = 11;
-            this.lblGarantie.Text = "* Garantie : ";
+            this.lblGarantie.Text = "Garantie *";
             // 
             // lblDateCirculation
             // 
             this.lblDateCirculation.AutoSize = true;
+            this.lblDateCirculation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateCirculation.Location = new System.Drawing.Point(268, 52);
             this.lblDateCirculation.Name = "lblDateCirculation";
-            this.lblDateCirculation.Size = new System.Drawing.Size(151, 13);
+            this.lblDateCirculation.Size = new System.Drawing.Size(175, 13);
             this.lblDateCirculation.TabIndex = 10;
-            this.lblDateCirculation.Text = "* Date de mise en circulation : ";
+            this.lblDateCirculation.Text = "Date de mise en circulation * ";
             // 
             // lblType
             // 
             this.lblType.AutoSize = true;
+            this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.Location = new System.Drawing.Point(144, 52);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(47, 13);
+            this.lblType.Size = new System.Drawing.Size(44, 13);
             this.lblType.TabIndex = 9;
-            this.lblType.Text = "* Type : ";
+            this.lblType.Text = "Type *";
             // 
             // lblMarque
             // 
             this.lblMarque.AutoSize = true;
+            this.lblMarque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarque.Location = new System.Drawing.Point(16, 52);
             this.lblMarque.Name = "lblMarque";
-            this.lblMarque.Size = new System.Drawing.Size(59, 13);
+            this.lblMarque.Size = new System.Drawing.Size(62, 13);
             this.lblMarque.TabIndex = 8;
-            this.lblMarque.Text = "* Marque : ";
+            this.lblMarque.Text = "Marque * ";
             // 
             // tblFrmMat
             // 
@@ -273,56 +279,62 @@ namespace gsb_application
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(498, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "n° attribué : ";
+            this.label3.Text = "n° attribué ";
             // 
             // lblActionLicDuree
             // 
             this.lblActionLicDuree.AutoSize = true;
+            this.lblActionLicDuree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActionLicDuree.Location = new System.Drawing.Point(446, 46);
             this.lblActionLicDuree.Name = "lblActionLicDuree";
-            this.lblActionLicDuree.Size = new System.Drawing.Size(46, 13);
+            this.lblActionLicDuree.Size = new System.Drawing.Size(47, 13);
             this.lblActionLicDuree.TabIndex = 13;
-            this.lblActionLicDuree.Text = "Action : ";
+            this.lblActionLicDuree.Text = "Action ";
             // 
             // lblNumMatAssocLicDuree
             // 
             this.lblNumMatAssocLicDuree.AutoSize = true;
+            this.lblNumMatAssocLicDuree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumMatAssocLicDuree.Location = new System.Drawing.Point(355, 46);
             this.lblNumMatAssocLicDuree.Name = "lblNumMatAssocLicDuree";
-            this.lblNumMatAssocLicDuree.Size = new System.Drawing.Size(83, 13);
+            this.lblNumMatAssocLicDuree.Size = new System.Drawing.Size(92, 13);
             this.lblNumMatAssocLicDuree.TabIndex = 12;
-            this.lblNumMatAssocLicDuree.Text = "n° mat. assoc. : ";
+            this.lblNumMatAssocLicDuree.Text = "n° mat. assoc. ";
             // 
             // lblDuree
             // 
             this.lblDuree.AutoSize = true;
+            this.lblDuree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuree.Location = new System.Drawing.Point(295, 46);
             this.lblDuree.Name = "lblDuree";
-            this.lblDuree.Size = new System.Drawing.Size(52, 13);
+            this.lblDuree.Size = new System.Drawing.Size(50, 13);
             this.lblDuree.TabIndex = 11;
-            this.lblDuree.Text = "* Durée : ";
+            this.lblDuree.Text = "Durée *";
             // 
             // lblDateDebutLicDuree
             // 
             this.lblDateDebutLicDuree.AutoSize = true;
+            this.lblDateDebutLicDuree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateDebutLicDuree.Location = new System.Drawing.Point(129, 46);
             this.lblDateDebutLicDuree.Name = "lblDateDebutLicDuree";
-            this.lblDateDebutLicDuree.Size = new System.Drawing.Size(91, 13);
+            this.lblDateDebutLicDuree.Size = new System.Drawing.Size(97, 13);
             this.lblDateDebutLicDuree.TabIndex = 10;
-            this.lblDateDebutLicDuree.Text = "* Date du début : ";
+            this.lblDateDebutLicDuree.Text = "Date du début *";
             // 
             // lblNomLicDuree
             // 
             this.lblNomLicDuree.AutoSize = true;
+            this.lblNomLicDuree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomLicDuree.Location = new System.Drawing.Point(16, 46);
             this.lblNomLicDuree.Name = "lblNomLicDuree";
-            this.lblNomLicDuree.Size = new System.Drawing.Size(44, 13);
+            this.lblNomLicDuree.Size = new System.Drawing.Size(42, 13);
             this.lblNomLicDuree.TabIndex = 9;
-            this.lblNomLicDuree.Text = "* Titre : ";
+            this.lblNomLicDuree.Text = "Titre *";
             // 
             // tblFrmLicDuree
             // 
@@ -389,38 +401,42 @@ namespace gsb_application
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(250, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 15;
-            this.label4.Text = "n° attribué : ";
+            this.label4.Text = "n° attribué ";
             // 
             // lblActionLicVersion
             // 
             this.lblActionLicVersion.AutoSize = true;
+            this.lblActionLicVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActionLicVersion.Location = new System.Drawing.Point(190, 48);
             this.lblActionLicVersion.Name = "lblActionLicVersion";
-            this.lblActionLicVersion.Size = new System.Drawing.Size(46, 13);
+            this.lblActionLicVersion.Size = new System.Drawing.Size(47, 13);
             this.lblActionLicVersion.TabIndex = 14;
-            this.lblActionLicVersion.Text = "Action : ";
+            this.lblActionLicVersion.Text = "Action ";
             // 
             // lblNumMatAssocLicVersion
             // 
             this.lblNumMatAssocLicVersion.AutoSize = true;
+            this.lblNumMatAssocLicVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumMatAssocLicVersion.Location = new System.Drawing.Point(101, 48);
             this.lblNumMatAssocLicVersion.Name = "lblNumMatAssocLicVersion";
-            this.lblNumMatAssocLicVersion.Size = new System.Drawing.Size(83, 13);
+            this.lblNumMatAssocLicVersion.Size = new System.Drawing.Size(92, 13);
             this.lblNumMatAssocLicVersion.TabIndex = 13;
-            this.lblNumMatAssocLicVersion.Text = "n° mat. assoc. : ";
+            this.lblNumMatAssocLicVersion.Text = "n° mat. assoc. ";
             // 
             // lblNomLicVersion
             // 
             this.lblNomLicVersion.AutoSize = true;
+            this.lblNomLicVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomLicVersion.Location = new System.Drawing.Point(16, 48);
             this.lblNomLicVersion.Name = "lblNomLicVersion";
-            this.lblNomLicVersion.Size = new System.Drawing.Size(44, 13);
+            this.lblNomLicVersion.Size = new System.Drawing.Size(42, 13);
             this.lblNomLicVersion.TabIndex = 10;
-            this.lblNomLicVersion.Text = "* Titre : ";
+            this.lblNomLicVersion.Text = "Titre *";
             // 
             // tblFrmLicVersion
             // 
@@ -466,9 +482,9 @@ namespace gsb_application
             this.lblInfo.AutoSize = true;
             this.lblInfo.Location = new System.Drawing.Point(12, 12);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(110, 13);
+            this.lblInfo.Size = new System.Drawing.Size(104, 13);
             this.lblInfo.TabIndex = 8;
-            this.lblInfo.Text = "* : donnée obligatoire ";
+            this.lblInfo.Text = "* donnée obligatoire ";
             // 
             // frmSaisie
             // 

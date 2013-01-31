@@ -9,13 +9,17 @@ using System.Windows.Forms;
 
 namespace gsb_application
 {
+    /// <summary>
+    /// classe qui représente le module d'aide de l'application
+    /// </summary>
     public partial class Aide : Form
     {
+        /// <summary>
+        /// constructeur de la classe
+        /// </summary>
         public Aide()
         {
             InitializeComponent();
         }
     }
-
-    
 }

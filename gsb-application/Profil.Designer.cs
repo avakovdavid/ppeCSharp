@@ -123,6 +123,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 228);
             this.Name = "Profil";
+            this.ShowIcon = false;
             this.Text = "Changer le mot de passe";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -48,19 +48,10 @@ namespace gsb_application
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manuelDutilisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoConnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
             // 
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichierToolStripMenuItem,
-            this.lesPrêtsToolStripMenuItem,
-            this.administrationToolStripMenuItem,
-            this.statistiqueToolStripMenuItem,
-            this.profilToolStripMenuItem,
-            this.aideToolStripMenuItem,
-            this.infoConnexionToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(688, 24);
@@ -69,10 +60,6 @@ namespace gsb_application
             // 
             // fichierToolStripMenuItem
             // 
-            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.seConnecterToolStripMenuItem,
-            this.seDeconnecterToolStripMenuItem,
-            this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.fichierToolStripMenuItem.Text = "Connexion";
@@ -145,9 +132,6 @@ namespace gsb_application
             // 
             // statistiqueToolStripMenuItem
             // 
-            this.statistiqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.affToolStripMenuItem,
-            this.statistiqueDesMateriauxToolStripMenuItem});
             this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
             this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.statistiqueToolStripMenuItem.Text = "Statistique";
@@ -170,8 +154,6 @@ namespace gsb_application
             // 
             // profilToolStripMenuItem
             // 
-            this.profilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changerDeMotDePasseToolStripMenuItem});
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
             this.profilToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.profilToolStripMenuItem.Text = "Profil";
@@ -213,8 +195,6 @@ namespace gsb_application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(688, 411);
             this.Controls.Add(this.menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -223,11 +203,8 @@ namespace gsb_application
             this.MainMenuStrip = this.menu;
             this.Name = "MainWindows";
             this.Text = "Application de gestion des prêts";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.evenementClavier_KeyPress);
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

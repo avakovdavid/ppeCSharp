@@ -33,13 +33,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNvoMat));
             this.panel = new System.Windows.Forms.Panel();
+            this.garantieMat = new System.Windows.Forms.NumericUpDown();
             this.lblNumMatAttribue = new System.Windows.Forms.Label();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnSupp = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.cBoxType = new System.Windows.Forms.ComboBox();
             this.cBoxMarque = new System.Windows.Forms.ComboBox();
-            this.garantieMat = new System.Windows.Forms.NumericUpDown();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.garantieMat)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,19 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(638, 27);
             this.panel.TabIndex = 5;
+            // 
+            // garantieMat
+            // 
+            this.garantieMat.Location = new System.Drawing.Point(444, 3);
+            this.garantieMat.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.garantieMat.Name = "garantieMat";
+            this.garantieMat.Size = new System.Drawing.Size(45, 20);
+            this.garantieMat.TabIndex = 7;
+            this.garantieMat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNumMatAttribue
             // 
@@ -111,19 +124,6 @@
             this.cBoxMarque.Name = "cBoxMarque";
             this.cBoxMarque.Size = new System.Drawing.Size(121, 21);
             this.cBoxMarque.TabIndex = 0;
-            // 
-            // garantieMat
-            // 
-            this.garantieMat.Location = new System.Drawing.Point(444, 3);
-            this.garantieMat.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.garantieMat.Name = "garantieMat";
-            this.garantieMat.Size = new System.Drawing.Size(45, 20);
-            this.garantieMat.TabIndex = 7;
-            this.garantieMat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmNvoMat
             // 

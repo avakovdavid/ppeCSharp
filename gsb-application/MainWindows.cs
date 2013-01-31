@@ -98,7 +98,16 @@ namespace gsb_application
         }
 
         /// <summary>
-        /// Setter pour la personne connectée (qui vient de se connecter
+        /// Getter pour l'item du menu qui affiche la personne connectée
+        /// </summary>
+        /// <returns>l'item de la personne connectée à droit du menu</returns>
+        public ToolStripMenuItem getInfoConnexion()
+        {
+            return this.infoConnexionToolStripMenuItem;
+        }
+
+        /// <summary>
+        /// Setter pour la personne connectée (qui vient de se connecter)
         /// </summary>
         /// <param name="p">personne qui vient de se connecter</param>
         public static void setPersConnect(Object p)
@@ -252,7 +261,7 @@ namespace gsb_application
                 this.MdiChildren.ElementAt(0).Close();
             }
 
-            getProfil().Text = "Profil";
+            getInfoConnexion().Text = "Vous n'êtes pas connectés";
 
             persConnect = null;
             this.init();

@@ -48,7 +48,7 @@ namespace gsb_application
                         ((MainWindows)MdiParent).getProfil().Enabled = true;
                         ((MainWindows)MdiParent).getStatistiques().Enabled = true;
 
-                        ((MainWindows)MdiParent).getProfil().Text = p.getNomPersonne() + " " + p.getPrenomPersonne();
+                        ((MainWindows)MdiParent).getInfoConnexion().Text = p.getNomPersonne() + " " + p.getPrenomPersonne();
 
                         this.Close();
 

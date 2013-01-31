@@ -46,241 +46,303 @@ namespace gsb_application
         /// <param name="id">identifiant de la personne dont ont souhaite afficher le résumé (-1 dans le cas d'un premier affichage où aucune personne n'est encore choisie)</param>
         public void init(int id)
         {
-            //si aucune personne n'est selectionnée dans la liste :
+            //si une personne est selectionnée dans la liste :
             if (id != -1)
             {
                 Mysql m = new Mysql();
-                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindows));
+                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResume));
 
                 this.tableLayoutMat.Controls.Clear();
                 this.tableLayoutLicDuree.Controls.Clear();
                 this.tableLayoutLicVersion.Controls.Clear();
 
                 /*TABLEAU DES MATERIELS */
-                Label lbl1 = new Label();
-                lbl1.Text = "n° du matériel";
-                this.tableLayoutMat.Controls.Add(lbl1, 0, 0);
-
-                Label lbl2 = new Label();
-                lbl2.Text = "Date de mise en circulation";
-                this.tableLayoutMat.Controls.Add(lbl2, 1, 0);
-
-                Label lbl3 = new Label();
-                lbl3.Text = "Garantie";
-                this.tableLayoutMat.Controls.Add(lbl3, 2, 0);
-
-                Label lbl4 = new Label();
-                lbl4.Text = "Marque";
-                this.tableLayoutMat.Controls.Add(lbl4, 3, 0);
-
-                Label lbl5 = new Label();
-                lbl5.Text = "Type";
-                this.tableLayoutMat.Controls.Add(lbl5, 4, 0);
-
-
                 List<Materiel> lesMat = m.getLesMateriel(id);
 
-                for (int i = 0; i < lesMat.Count; i++)
+                if (lesMat.Count > 0)
                 {
-                    Label lblId = new Label();
-                    lblId.Anchor = AnchorStyles.None;
-                    lblId.TextAlign = ContentAlignment.MiddleLeft;
-                    lblId.Text = lesMat.ElementAt(i).getIdMateriel().ToString();
-                    this.tableLayoutMat.Controls.Add(lblId, 0, i + 1);
+                    this.grpBoxMateriel.Show();
+                    Label lbl1 = new Label();
+                    lbl1.Text = "n° du matériel";
+                    this.tableLayoutMat.Controls.Add(lbl1, 0, 0);
+                    lbl1.Font = new Font(lbl1.Font, FontStyle.Bold);
 
-                    Label lblDate = new Label();
-                    lblDate.Anchor = AnchorStyles.Bottom;
-                    lblDate.TextAlign = ContentAlignment.MiddleLeft;
-                    lblDate.Text = lesMat.ElementAt(i).getDateCirculation().ToString();
-                    this.tableLayoutMat.Controls.Add(lblDate, 1, i + 1);
+                    Label lbl2 = new Label();
+                    lbl2.Text = "Date de mise en circulation";
+                    this.tableLayoutMat.Controls.Add(lbl2, 1, 0);
+                    lbl2.Font = new Font(lbl2.Font, FontStyle.Bold);
 
-                    Label lblGarantie = new Label();
-                    lblGarantie.Anchor = AnchorStyles.None;
-                    lblGarantie.TextAlign = ContentAlignment.MiddleLeft;
-                    lblGarantie.Text = lesMat.ElementAt(i).getGarantie().ToString() + " an(s)";
-                    this.tableLayoutMat.Controls.Add(lblGarantie, 2, i + 1);
+                    Label lbl3 = new Label();
+                    lbl3.Text = "Garantie";
+                    this.tableLayoutMat.Controls.Add(lbl3, 2, 0);
+                    lbl3.Font = new Font(lbl3.Font, FontStyle.Bold);
 
-                    Label lblMarque = new Label();
-                    lblMarque.Anchor = AnchorStyles.None;
-                    lblMarque.TextAlign = ContentAlignment.MiddleLeft;
-                    lblMarque.Text = lesMat.ElementAt(i).getMarque().getNomMarque();
-                    this.tableLayoutMat.Controls.Add(lblMarque, 3, i + 1);
+                    Label lbl4 = new Label();
+                    lbl4.Text = "Marque";
+                    this.tableLayoutMat.Controls.Add(lbl4, 3, 0);
+                    lbl4.Font = new Font(lbl4.Font, FontStyle.Bold);
 
-                    Label lblType = new Label();
-                    lblType.Anchor = AnchorStyles.None;
-                    lblType.TextAlign = ContentAlignment.MiddleLeft;
-                    lblType.Text = lesMat.ElementAt(i).getType().getTypeMateriel();
-                    this.tableLayoutMat.Controls.Add(lblType, 4, i + 1);
+                    Label lbl5 = new Label();
+                    lbl5.Text = "Type";
+                    this.tableLayoutMat.Controls.Add(lbl5, 4, 0);
+                    lbl5.Font = new Font(lbl5.Font, FontStyle.Bold);
 
-                    Button btnSuppMat = new Button();
-                    btnSuppMat.Anchor = AnchorStyles.None;
-                    btnSuppMat.TextAlign = ContentAlignment.MiddleLeft;
+                    for (int i = 0; i < lesMat.Count; i++)
+                    {
+                        Label lblId = new Label();
+                        lblId.Anchor = AnchorStyles.None;
+                        lblId.TextAlign = ContentAlignment.MiddleLeft;
+                        lblId.Text = lesMat.ElementAt(i).getIdMateriel().ToString();
+                        this.tableLayoutMat.Controls.Add(lblId, 0, i + 1);
 
-                    this.tableLayoutMat.Controls.Add(btnSuppMat, 5, i + 1);
+                        Label lblDate = new Label();
+                        lblDate.Anchor = AnchorStyles.Bottom;
+                        lblDate.TextAlign = ContentAlignment.MiddleLeft;
+                        lblDate.Text = lesMat.ElementAt(i).getDateCirculation().ToString();
+                        this.tableLayoutMat.Controls.Add(lblDate, 1, i + 1);
 
-                    btnSuppMat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supp")));
-                    btnSuppMat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                    btnSuppMat.Size = new System.Drawing.Size(25, 25);
-                    btnSuppMat.UseVisualStyleBackColor = true;
-                    btnSuppMat.Click += new System.EventHandler(this.btnSuppMat_Click);
-                    //btnSuppMat.Get
+                        Label lblGarantie = new Label();
+                        lblGarantie.Anchor = AnchorStyles.None;
+                        lblGarantie.TextAlign = ContentAlignment.MiddleLeft;
+                        lblGarantie.Text = lesMat.ElementAt(i).getGarantie().ToString() + " an(s)";
+                        this.tableLayoutMat.Controls.Add(lblGarantie, 2, i + 1);
+
+                        Label lblMarque = new Label();
+                        lblMarque.Anchor = AnchorStyles.None;
+                        lblMarque.TextAlign = ContentAlignment.MiddleLeft;
+                        lblMarque.Text = lesMat.ElementAt(i).getMarque().getNomMarque();
+                        this.tableLayoutMat.Controls.Add(lblMarque, 3, i + 1);
+
+                        Label lblType = new Label();
+                        lblType.Anchor = AnchorStyles.None;
+                        lblType.TextAlign = ContentAlignment.MiddleLeft;
+                        lblType.Text = lesMat.ElementAt(i).getType().getTypeMateriel();
+                        this.tableLayoutMat.Controls.Add(lblType, 4, i + 1);
+
+                        Button btnSuppMat = new Button();
+                        Button btnModifMat = new Button();
+                        btnSuppMat.Anchor = AnchorStyles.None;
+                        btnModifMat.Anchor = AnchorStyles.None;
+                        btnSuppMat.TextAlign = ContentAlignment.MiddleLeft;
+                        btnModifMat.TextAlign = ContentAlignment.MiddleLeft;
+
+                        this.tableLayoutMat.Controls.Add(btnSuppMat, 5, i + 1);
+                        this.tableLayoutMat.Controls.Add(btnModifMat, 6, i + 1);
+
+                        btnSuppMat.BackgroundImage = global::gsb_application.Properties.Resources.supp;
+                        btnSuppMat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        btnSuppMat.Size = new System.Drawing.Size(25, 25);
+                        btnSuppMat.UseVisualStyleBackColor = true;
+                        btnSuppMat.Click += new System.EventHandler(this.btnSuppMat_Click);
+
+                        btnModifMat.BackgroundImage = global::gsb_application.Properties.Resources.edit;
+                        btnModifMat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        btnModifMat.Size = new System.Drawing.Size(25, 25);
+                        btnModifMat.UseVisualStyleBackColor = true;
+                        btnModifMat.Click += new System.EventHandler(this.btnModifMat_Click);
+                    }
                 }
-
+                else
+                {
+                    this.grpBoxMateriel.Hide();
+                }
 
                 /*TABLEAU DES LICENCES DE DUREE*/
-
-                Label lbl7 = new Label();
-                lbl7.Text = "n° licence";
-                this.tableLayoutLicDuree.Controls.Add(lbl7, 0, 0);
-
-                Label lbl8 = new Label();
-                lbl8.Text = "Titre";
-                this.tableLayoutLicDuree.Controls.Add(lbl8, 1, 0);
-
-                Label lbl9 = new Label();
-                lbl9.Text = "Date du début";
-                this.tableLayoutLicDuree.Controls.Add(lbl9, 2, 0);
-
-                Label lbl10 = new Label();
-                lbl10.Text = "Durée";
-                this.tableLayoutLicDuree.Controls.Add(lbl10, 3, 0);
-
-                Label lbl11 = new Label();
-                lbl11.Text = "n° matériel associé";
-                this.tableLayoutLicDuree.Controls.Add(lbl11, 4, 0);
-
-
                 List<Licence_duree> lesLicDur = m.getLesLicenceDuree(id);
 
-                for (int i = 0; i < lesLicDur.Count; i++)
+                if (lesLicDur.Count > 0)
                 {
-                    Label lblId = new Label();
-                    lblId.Anchor = AnchorStyles.None;
-                    lblId.TextAlign = ContentAlignment.MiddleLeft;
-                    lblId.Text = lesLicDur.ElementAt(i).getIdLicence().ToString();
-                    this.tableLayoutLicDuree.Controls.Add(lblId, 0, i + 1);
+                    this.grpBoxLicDuree.Show();
 
-                    Label lblTitre = new Label();
-                    lblTitre.Anchor = AnchorStyles.None;
-                    lblTitre.TextAlign = ContentAlignment.MiddleLeft;
-                    lblTitre.Text = lesLicDur.ElementAt(i).getNomVersion().ToString();
-                    this.tableLayoutLicDuree.Controls.Add(lblTitre, 1, i + 1);
+                    Label lbl7 = new Label();
+                    lbl7.Text = "n° licence";
+                    this.tableLayoutLicDuree.Controls.Add(lbl7, 0, 0);
+                    lbl7.Font = new Font(lbl7.Font, FontStyle.Bold);
 
-                    Label lblDate = new Label();
-                    lblDate.Anchor = AnchorStyles.Bottom;
-                    lblDate.TextAlign = ContentAlignment.MiddleLeft;
-                    lblDate.Text = lesLicDur.ElementAt(i).getDebutLicence().ToString();
-                    this.tableLayoutLicDuree.Controls.Add(lblDate, 2, i + 1);
+                    Label lbl8 = new Label();
+                    lbl8.Text = "Titre";
+                    this.tableLayoutLicDuree.Controls.Add(lbl8, 1, 0);
+                    lbl8.Font = new Font(lbl8.Font, FontStyle.Bold);
 
-                    Label lblDuree = new Label();
-                    lblDuree.Anchor = AnchorStyles.None;
-                    lblDuree.TextAlign = ContentAlignment.MiddleLeft;
-                    lblDuree.Text = lesLicDur.ElementAt(i).getDureeLicence() + " an(s)";
-                    this.tableLayoutLicDuree.Controls.Add(lblDuree, 3, i + 1);
+                    Label lbl9 = new Label();
+                    lbl9.Text = "Date du début";
+                    this.tableLayoutLicDuree.Controls.Add(lbl9, 2, 0);
+                    lbl9.Font = new Font(lbl9.Font, FontStyle.Bold);
 
-                    
-                    try
+                    Label lbl10 = new Label();
+                    lbl10.Text = "Durée";
+                    this.tableLayoutLicDuree.Controls.Add(lbl10, 3, 0);
+                    lbl10.Font = new Font(lbl10.Font, FontStyle.Bold);
+
+                    Label lbl11 = new Label();
+                    lbl11.Text = "n° matériel associé";
+                    this.tableLayoutLicDuree.Controls.Add(lbl11, 4, 0);
+                    lbl11.Font = new Font(lbl11.Font, FontStyle.Bold);
+
+                    for (int i = 0; i < lesLicDur.Count; i++)
                     {
-                        Label lblNumMat = new Label();
-                        lblNumMat.Anchor = AnchorStyles.None;
-                        lblNumMat.TextAlign = ContentAlignment.MiddleLeft;
-                        lblNumMat.Text = lesLicDur.ElementAt(i).getMateriel().getIdMateriel().ToString();
-                        this.tableLayoutLicDuree.Controls.Add(lblNumMat, 4, i + 1);
+                        Label lblId = new Label();
+                        lblId.Anchor = AnchorStyles.None;
+                        lblId.TextAlign = ContentAlignment.MiddleLeft;
+                        lblId.Text = lesLicDur.ElementAt(i).getIdLicence().ToString();
+                        this.tableLayoutLicDuree.Controls.Add(lblId, 0, i + 1);
+
+                        Label lblTitre = new Label();
+                        lblTitre.Anchor = AnchorStyles.None;
+                        lblTitre.TextAlign = ContentAlignment.MiddleLeft;
+                        lblTitre.Text = lesLicDur.ElementAt(i).getNomVersion().ToString();
+                        this.tableLayoutLicDuree.Controls.Add(lblTitre, 1, i + 1);
+
+                        Label lblDate = new Label();
+                        lblDate.Anchor = AnchorStyles.Bottom;
+                        lblDate.TextAlign = ContentAlignment.MiddleLeft;
+                        lblDate.Text = lesLicDur.ElementAt(i).getDebutLicence().ToString();
+                        this.tableLayoutLicDuree.Controls.Add(lblDate, 2, i + 1);
+
+                        Label lblDuree = new Label();
+                        lblDuree.Anchor = AnchorStyles.None;
+                        lblDuree.TextAlign = ContentAlignment.MiddleLeft;
+                        lblDuree.Text = lesLicDur.ElementAt(i).getDureeLicence() + " an(s)";
+                        this.tableLayoutLicDuree.Controls.Add(lblDuree, 3, i + 1);
+
+                        try
+                        {
+                            Label lblNumMat = new Label();
+                            lblNumMat.Anchor = AnchorStyles.None;
+                            lblNumMat.TextAlign = ContentAlignment.MiddleLeft;
+                            lblNumMat.Text = lesLicDur.ElementAt(i).getMateriel().getIdMateriel().ToString();
+                            this.tableLayoutLicDuree.Controls.Add(lblNumMat, 4, i + 1);
+                        }
+                        catch (Exception ex) { }
+
+                        Button btnSuppLicDuree = new Button();
+                        Button btnModifLicDuree = new Button();
+                        btnSuppLicDuree.Anchor = AnchorStyles.None;
+                        btnModifLicDuree.Anchor = AnchorStyles.None;
+                        btnSuppLicDuree.TextAlign = ContentAlignment.MiddleLeft;
+                        btnModifLicDuree.TextAlign = ContentAlignment.MiddleLeft;
+
+                        this.tableLayoutLicDuree.Controls.Add(btnSuppLicDuree, 5, i + 1);
+                        this.tableLayoutLicDuree.Controls.Add(btnModifLicDuree, 6, i + 1);
+
+                        btnSuppLicDuree.BackgroundImage = global::gsb_application.Properties.Resources.supp;
+                        btnSuppLicDuree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        btnSuppLicDuree.Size = new System.Drawing.Size(25, 25);
+                        btnSuppLicDuree.UseVisualStyleBackColor = true;
+                        btnSuppLicDuree.Click += new System.EventHandler(this.btnSuppLicDuree_Click);
+
+                        btnModifLicDuree.BackgroundImage = global::gsb_application.Properties.Resources.edit;
+                        btnModifLicDuree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        btnModifLicDuree.Size = new System.Drawing.Size(25, 25);
+                        btnModifLicDuree.UseVisualStyleBackColor = true;
+                        btnModifLicDuree.Click += new System.EventHandler(this.btnModifLicDuree_Click);
                     }
-                    catch (Exception ex){}
-
-
-                    Button btnSuppLicDuree = new Button();
-                    Button btnModifLicDuree = new Button();
-                    btnSuppLicDuree.Anchor = AnchorStyles.None;
-                    btnModifLicDuree.Anchor = AnchorStyles.None;
-                    btnSuppLicDuree.TextAlign = ContentAlignment.MiddleLeft;
-                    btnModifLicDuree.TextAlign = ContentAlignment.MiddleLeft;
-
-                    this.tableLayoutLicDuree.Controls.Add(btnSuppLicDuree, 5, i + 1);
-                    this.tableLayoutLicDuree.Controls.Add(btnModifLicDuree, 6, i + 1);
-
-                    btnSuppLicDuree.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supp")));
-                    btnSuppLicDuree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                    btnSuppLicDuree.Size = new System.Drawing.Size(25, 25);
-                    btnSuppLicDuree.UseVisualStyleBackColor = true;
-                    btnSuppLicDuree.Click += new System.EventHandler(this.btnSuppLicDuree_Click);
-
-                    btnModifLicDuree.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("edit")));
-                    btnModifLicDuree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                    btnModifLicDuree.Size = new System.Drawing.Size(25, 25);
-                    btnModifLicDuree.UseVisualStyleBackColor = true;
-                    btnModifLicDuree.Click += new System.EventHandler(this.btnModifLicDuree_Click);  
                 }
-
+                else
+                {
+                    this.grpBoxLicDuree.Hide();
+                }
 
 
                 /*TABLEAU DES LICENCES DE VERSION*/
 
-                Label lbl12 = new Label();
-                lbl12.Text = "n° licence";
-                this.tableLayoutLicVersion.Controls.Add(lbl12, 0, 0);
-
-                Label lbl13 = new Label();
-                lbl13.Text = "Titre";
-                this.tableLayoutLicVersion.Controls.Add(lbl13, 1, 0);
-
-                Label lbl14 = new Label();
-                lbl14.Text = "n° matériel associé";
-                this.tableLayoutLicVersion.Controls.Add(lbl14, 2, 0);
-
-
                 List<Licence_version> lesLicVersion = m.getLesLicenceVersion(id);
 
-                for (int i = 0; i < lesLicVersion.Count; i++)
+                if (lesLicVersion.Count > 0)
                 {
-                    Label lblId = new Label();
-                    lblId.Anchor = AnchorStyles.None;
-                    lblId.TextAlign = ContentAlignment.MiddleLeft;
-                    lblId.Text = lesLicVersion.ElementAt(i).getIdLicence().ToString();
-                    this.tableLayoutLicVersion.Controls.Add(lblId, 0, i + 1);
+                    this.grpBoxLicVersion.Show();
 
-                    Label lblTitre = new Label();
-                    lblTitre.Anchor = AnchorStyles.None;
-                    lblTitre.TextAlign = ContentAlignment.MiddleLeft;
-                    lblTitre.Text = lesLicVersion.ElementAt(i).getNomVersion().ToString();
-                    this.tableLayoutLicVersion.Controls.Add(lblTitre, 1, i + 1);
+                    Label lbl12 = new Label();
+                    lbl12.Text = "n° licence";
+                    this.tableLayoutLicVersion.Controls.Add(lbl12, 0, 0);
+                    lbl12.Font = new Font(lbl12.Font, FontStyle.Bold);
 
-                    try
+                    Label lbl13 = new Label();
+                    lbl13.Text = "Titre";
+                    this.tableLayoutLicVersion.Controls.Add(lbl13, 1, 0);
+                    lbl13.Font = new Font(lbl13.Font, FontStyle.Bold);
+
+                    Label lbl14 = new Label();
+                    lbl14.Text = "n° matériel associé";
+                    this.tableLayoutLicVersion.Controls.Add(lbl14, 2, 0);
+                    lbl14.Font = new Font(lbl14.Font, FontStyle.Bold);
+
+                    for (int i = 0; i < lesLicVersion.Count; i++)
                     {
-                        Label lblNumMat = new Label();
-                        lblNumMat.Anchor = AnchorStyles.None;
-                        lblNumMat.TextAlign = ContentAlignment.MiddleLeft;
-                        lblNumMat.Text = lesLicVersion.ElementAt(i).getMateriel().getIdMateriel().ToString();
-                        this.tableLayoutLicVersion.Controls.Add(lblNumMat, 2, i + 1);
+                        Label lblId = new Label();
+                        lblId.Anchor = AnchorStyles.None;
+                        lblId.TextAlign = ContentAlignment.MiddleLeft;
+                        lblId.Text = lesLicVersion.ElementAt(i).getIdLicence().ToString();
+                        this.tableLayoutLicVersion.Controls.Add(lblId, 0, i + 1);
+
+                        Label lblTitre = new Label();
+                        lblTitre.Anchor = AnchorStyles.None;
+                        lblTitre.TextAlign = ContentAlignment.MiddleLeft;
+                        lblTitre.Text = lesLicVersion.ElementAt(i).getNomVersion().ToString();
+                        this.tableLayoutLicVersion.Controls.Add(lblTitre, 1, i + 1);
+
+                        try
+                        {
+                            Label lblNumMat = new Label();
+                            lblNumMat.Anchor = AnchorStyles.None;
+                            lblNumMat.TextAlign = ContentAlignment.MiddleLeft;
+                            lblNumMat.Text = lesLicVersion.ElementAt(i).getMateriel().getIdMateriel().ToString();
+                            this.tableLayoutLicVersion.Controls.Add(lblNumMat, 2, i + 1);
+                        }
+                        catch (Exception ex) { }
+
+
+                        Button btnSuppLicVersion = new Button();
+                        Button btnModifLicVersion = new Button();
+                        btnSuppLicVersion.Anchor = AnchorStyles.None;
+                        btnModifLicVersion.Anchor = AnchorStyles.None;
+                        btnSuppLicVersion.TextAlign = ContentAlignment.MiddleLeft;
+                        btnModifLicVersion.TextAlign = ContentAlignment.MiddleLeft;
+
+                        this.tableLayoutLicVersion.Controls.Add(btnSuppLicVersion, 3, i + 1);
+                        this.tableLayoutLicVersion.Controls.Add(btnModifLicVersion, 4, i + 1);
+
+                        btnSuppLicVersion.BackgroundImage = global::gsb_application.Properties.Resources.supp;
+                        btnSuppLicVersion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        btnSuppLicVersion.Size = new System.Drawing.Size(25, 25);
+                        btnSuppLicVersion.UseVisualStyleBackColor = true;
+                        btnSuppLicVersion.Click += new System.EventHandler(this.btnSuppLicVersion_Click);
+
+
+                        btnModifLicVersion.BackgroundImage = global::gsb_application.Properties.Resources.edit;
+                        btnModifLicVersion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        btnModifLicVersion.Size = new System.Drawing.Size(25, 25);
+                        btnModifLicVersion.UseVisualStyleBackColor = true;
+                        btnModifLicVersion.Click += new System.EventHandler(this.btnModifLicVersion_Click);
                     }
-                    catch (Exception ex) { }
+                }
+                else
+                {
+                    this.grpBoxLicVersion.Hide();
+                }
 
-
-                    Button btnSuppLicVersion = new Button();
-                    Button btnModifLicVersion = new Button();
-                    btnSuppLicVersion.Anchor = AnchorStyles.None;
-                    btnModifLicVersion.Anchor = AnchorStyles.None;
-                    btnSuppLicVersion.TextAlign = ContentAlignment.MiddleLeft;
-                    btnModifLicVersion.TextAlign = ContentAlignment.MiddleLeft;
-
-                    this.tableLayoutLicVersion.Controls.Add(btnSuppLicVersion, 3, i + 1);
-                    this.tableLayoutLicVersion.Controls.Add(btnModifLicVersion, 4, i + 1);
-
-                    btnSuppLicVersion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supp")));
-                    btnSuppLicVersion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                    btnSuppLicVersion.Size = new System.Drawing.Size(25, 25);
-                    btnSuppLicVersion.UseVisualStyleBackColor = true;
-                    btnSuppLicVersion.Click += new System.EventHandler(this.btnSuppLicVersion_Click);
-
-
-                    btnModifLicVersion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("edit")));
-                    btnModifLicVersion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                    btnModifLicVersion.Size = new System.Drawing.Size(25, 25);
-                    btnModifLicVersion.UseVisualStyleBackColor = true;
-                    btnModifLicVersion.Click += new System.EventHandler(this.btnModifLicVersion_Click);                    
+                if (lesMat.Count == 0 && lesLicDur.Count == 0 && lesLicVersion.Count == 0)
+                {
+                    MessageBox.Show("Aucun prêt pour " + this.listBoxQui.SelectedItem.ToString());
                 }
             }
+            else
+            {
+                this.grpBoxMateriel.Hide();
+                this.grpBoxLicDuree.Hide();
+                this.grpBoxLicVersion.Hide();
+            }
+        }
+
+        /// <summary>
+        /// fonction qui se déclenche lorsque le bouton de modification d'un matériel est cliqué. Permet de faire appel à une boite de dialogue pour modifier les données du matériel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void btnModifMat_Click(object sender, EventArgs e)
+        {
+            modifMateriel modif = new modifMateriel(this,int.Parse(this.tableLayoutMat.GetControlFromPosition(0, this.tableLayoutMat.GetCellPosition((Control)sender).Row).Text));
+            modif.ShowDialog();
         }
 
         /// <summary>

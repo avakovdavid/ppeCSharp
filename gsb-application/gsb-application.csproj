@@ -12,6 +12,8 @@
     <AssemblyName>gsb-application</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>logoFinal.ico</ApplicationIcon>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -139,6 +140,12 @@
     <Compile Include="modifLicVersion.Designer.cs">
       <DependentUpon>modifLicVersion.cs</DependentUpon>
     </Compile>
+    <Compile Include="modifMateriel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifMateriel.Designer.cs">
+      <DependentUpon>modifMateriel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +211,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modifLicVersion.resx">
       <DependentUpon>modifLicVersion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifMateriel.resx">
+      <DependentUpon>modifMateriel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Profil.resx">
@@ -292,12 +303,6 @@
     <None Include="Resources\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\menu_deco1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu_co1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\changer_mdp1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -308,6 +313,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\connexion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logoFinal.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\stat_materiel.png" />
+    <None Include="Resources\stat_app.png" />
+    <None Include="Resources\saisie_prets.png" />
+    <None Include="Resources\resume_prets.png" />
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
