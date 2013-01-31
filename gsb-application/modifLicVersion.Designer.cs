@@ -47,7 +47,7 @@
             this.lblNumMatAssoc.Location = new System.Drawing.Point(171, 64);
             this.lblNumMatAssoc.Name = "lblNumMatAssoc";
             this.lblNumMatAssoc.Size = new System.Drawing.Size(51, 20);
-            this.lblNumMatAssoc.TabIndex = 11;
+            this.lblNumMatAssoc.TabIndex = 6;
             // 
             // lblNumLic
             // 
@@ -56,7 +56,7 @@
             this.lblNumLic.Location = new System.Drawing.Point(171, 5);
             this.lblNumLic.Name = "lblNumLic";
             this.lblNumLic.Size = new System.Drawing.Size(51, 20);
-            this.lblNumLic.TabIndex = 10;
+            this.lblNumLic.TabIndex = 4;
             // 
             // label5
             // 
@@ -64,7 +64,7 @@
             this.label5.Location = new System.Drawing.Point(18, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 13);
-            this.label5.TabIndex = 9;
+            this.label5.TabIndex = 3;
             this.label5.Text = "n°  du matériel associé : ";
             // 
             // panel1
@@ -87,7 +87,7 @@
             this.txtBoxNomLicVersion.Location = new System.Drawing.Point(174, 37);
             this.txtBoxNomLicVersion.Name = "txtBoxNomLicVersion";
             this.txtBoxNomLicVersion.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxNomLicVersion.TabIndex = 4;
+            this.txtBoxNomLicVersion.TabIndex = 5;
             // 
             // label2
             // 
@@ -95,7 +95,7 @@
             this.label2.Location = new System.Drawing.Point(18, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Nom de la licence : ";
             // 
             // label1
@@ -104,7 +104,7 @@
             this.label1.Location = new System.Drawing.Point(18, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 1;
             this.label1.Text = "n°  de la licence : ";
             // 
             // btnAnnul
@@ -113,7 +113,7 @@
             this.btnAnnul.Location = new System.Drawing.Point(164, 105);
             this.btnAnnul.Name = "btnAnnul";
             this.btnAnnul.Size = new System.Drawing.Size(75, 23);
-            this.btnAnnul.TabIndex = 1;
+            this.btnAnnul.TabIndex = 8;
             this.btnAnnul.Text = "Annuler";
             this.btnAnnul.UseVisualStyleBackColor = true;
             this.btnAnnul.Click += new System.EventHandler(this.btnAnnul_Click);
@@ -124,7 +124,7 @@
             this.btnValider.Location = new System.Drawing.Point(83, 105);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
-            this.btnValider.TabIndex = 0;
+            this.btnValider.TabIndex = 7;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
@@ -133,6 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(338, 165);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

@@ -68,7 +68,8 @@ namespace gsb_application
                     lbl1.Font = new Font(lbl1.Font, FontStyle.Bold);
 
                     Label lbl2 = new Label();
-                    lbl2.Text = "Date de mise en circulation";
+                    lbl2.Text = "Mise en circulation";
+                    lbl2.Size = new Size(130, 13);
                     this.tableLayoutMat.Controls.Add(lbl2, 1, 0);
                     lbl2.Font = new Font(lbl2.Font, FontStyle.Bold);
 

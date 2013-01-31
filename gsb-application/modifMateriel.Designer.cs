@@ -74,7 +74,7 @@
             this.lblNumMateriel.Location = new System.Drawing.Point(159, 7);
             this.lblNumMateriel.Name = "lblNumMateriel";
             this.lblNumMateriel.Size = new System.Drawing.Size(51, 20);
-            this.lblNumMateriel.TabIndex = 12;
+            this.lblNumMateriel.TabIndex = 5;
             // 
             // btnAnnul
             // 
@@ -104,7 +104,7 @@
             this.label5.Location = new System.Drawing.Point(16, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 9;
+            this.label5.TabIndex = 4;
             this.label5.Text = "Garantie";
             // 
             // label4
@@ -113,7 +113,7 @@
             this.label4.Location = new System.Drawing.Point(16, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 13);
-            this.label4.TabIndex = 8;
+            this.label4.TabIndex = 3;
             this.label4.Text = "Date de mise en circulation";
             // 
             // label3
@@ -122,7 +122,7 @@
             this.label3.Location = new System.Drawing.Point(16, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 7;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Type";
             // 
             // label2
@@ -131,7 +131,7 @@
             this.label2.Location = new System.Drawing.Point(16, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Marque";
             // 
             // label1
@@ -140,7 +140,7 @@
             this.label1.Location = new System.Drawing.Point(16, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 0;
             this.label1.Text = "n° du matériel";
             // 
             // garantie
@@ -153,7 +153,7 @@
             0});
             this.garantie.Name = "garantie";
             this.garantie.Size = new System.Drawing.Size(47, 20);
-            this.garantie.TabIndex = 3;
+            this.garantie.TabIndex = 9;
             this.garantie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.garantie.Value = new decimal(new int[] {
             1,
@@ -166,7 +166,7 @@
             this.dateMiseCirculation.Location = new System.Drawing.Point(162, 85);
             this.dateMiseCirculation.Name = "dateMiseCirculation";
             this.dateMiseCirculation.Size = new System.Drawing.Size(176, 20);
-            this.dateMiseCirculation.TabIndex = 2;
+            this.dateMiseCirculation.TabIndex = 8;
             // 
             // cBoxType
             // 
@@ -174,7 +174,7 @@
             this.cBoxType.Location = new System.Drawing.Point(162, 57);
             this.cBoxType.Name = "cBoxType";
             this.cBoxType.Size = new System.Drawing.Size(121, 21);
-            this.cBoxType.TabIndex = 1;
+            this.cBoxType.TabIndex = 7;
             // 
             // cBoxMarque
             // 
@@ -182,12 +182,13 @@
             this.cBoxMarque.Location = new System.Drawing.Point(162, 30);
             this.cBoxMarque.Name = "cBoxMarque";
             this.cBoxMarque.Size = new System.Drawing.Size(121, 21);
-            this.cBoxMarque.TabIndex = 0;
+            this.cBoxMarque.TabIndex = 6;
             // 
             // modifMateriel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(388, 204);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

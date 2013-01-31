@@ -79,5 +79,10 @@ namespace gsb_application
                 this.btnConnexion_Click(sender, e);
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://gsb-informatique.hostzi.com/recuperation.php");
+        }
     }
 }

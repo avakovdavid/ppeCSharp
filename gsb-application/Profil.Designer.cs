@@ -44,7 +44,7 @@
             this.btnValider.Location = new System.Drawing.Point(86, 123);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
-            this.btnValider.TabIndex = 0;
+            this.btnValider.TabIndex = 7;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
@@ -115,8 +115,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 190);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(294, 200);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(300, 228);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 228);

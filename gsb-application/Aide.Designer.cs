@@ -152,7 +152,7 @@ namespace gsb_application
             // 
             richTextBox5.BackColor = System.Drawing.SystemColors.Window;
             richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            richTextBox5.Location = new System.Drawing.Point(6, 361);
+            richTextBox5.Location = new System.Drawing.Point(5, 358);
             richTextBox5.Name = "richTextBox5";
             richTextBox5.ReadOnly = true;
             richTextBox5.Size = new System.Drawing.Size(582, 172);
@@ -189,7 +189,7 @@ namespace gsb_application
             richTextBox8.BackColor = System.Drawing.SystemColors.Window;
             richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             richTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            richTextBox8.Location = new System.Drawing.Point(226, 393);
+            richTextBox8.Location = new System.Drawing.Point(226, 314);
             richTextBox8.Name = "richTextBox8";
             richTextBox8.ReadOnly = true;
             richTextBox8.Size = new System.Drawing.Size(188, 16);
@@ -212,7 +212,7 @@ namespace gsb_application
             richTextBox9.BackColor = System.Drawing.SystemColors.Window;
             richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            richTextBox9.Location = new System.Drawing.Point(363, 683);
+            richTextBox9.Location = new System.Drawing.Point(363, 594);
             richTextBox9.Name = "richTextBox9";
             richTextBox9.ReadOnly = true;
             richTextBox9.Size = new System.Drawing.Size(187, 13);
@@ -370,11 +370,11 @@ namespace gsb_application
             // pageStat
             // 
             this.pageStat.AutoScroll = true;
+            this.pageStat.Controls.Add(this.pictureBox14);
             this.pageStat.Controls.Add(richTextBox9);
             this.pageStat.Controls.Add(richTextBox11);
             this.pageStat.Controls.Add(richTextBox8);
             this.pageStat.Controls.Add(this.pictureBox15);
-            this.pageStat.Controls.Add(this.pictureBox14);
             this.pageStat.Location = new System.Drawing.Point(4, 22);
             this.pageStat.Name = "pageStat";
             this.pageStat.Padding = new System.Windows.Forms.Padding(3);
@@ -443,27 +443,29 @@ namespace gsb_application
             // 
             // pictureBox12
             // 
+            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox12.Image = global::gsb_application.Properties.Resources.saisie_prets;
-            this.pictureBox12.Location = new System.Drawing.Point(39, 6);
+            this.pictureBox12.Location = new System.Drawing.Point(38, 3);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(520, 340);
+            this.pictureBox12.Size = new System.Drawing.Size(508, 337);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 8;
             this.pictureBox12.TabStop = false;
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Image = global::gsb_application.Properties.Resources.edit;
-            this.pictureBox11.Location = new System.Drawing.Point(59, 502);
+            this.pictureBox11.Image = global::gsb_application.Properties.Resources.plus;
+            this.pictureBox11.Location = new System.Drawing.Point(58, 499);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 7;
             this.pictureBox11.TabStop = false;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::gsb_application.Properties.Resources.ok;
-            this.pictureBox10.Location = new System.Drawing.Point(59, 450);
+            this.pictureBox10.Location = new System.Drawing.Point(58, 447);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(20, 20);
             this.pictureBox10.TabIndex = 6;
@@ -472,7 +474,7 @@ namespace gsb_application
             // pictureBox9
             // 
             this.pictureBox9.Image = global::gsb_application.Properties.Resources.supp;
-            this.pictureBox9.Location = new System.Drawing.Point(59, 476);
+            this.pictureBox9.Location = new System.Drawing.Point(58, 473);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(20, 20);
             this.pictureBox9.TabIndex = 5;
@@ -480,10 +482,11 @@ namespace gsb_application
             // 
             // pictureBox13
             // 
+            this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox13.Image = global::gsb_application.Properties.Resources.resume_prets;
             this.pictureBox13.Location = new System.Drawing.Point(56, 6);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(520, 340);
+            this.pictureBox13.Size = new System.Drawing.Size(512, 339);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 8;
             this.pictureBox13.TabStop = false;
@@ -530,20 +533,22 @@ namespace gsb_application
             // 
             // pictureBox15
             // 
+            this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox15.Image = global::gsb_application.Properties.Resources.stat_materiel;
-            this.pictureBox15.Location = new System.Drawing.Point(46, 427);
+            this.pictureBox15.Location = new System.Drawing.Point(46, 347);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(504, 250);
+            this.pictureBox15.Size = new System.Drawing.Size(504, 241);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 1;
             this.pictureBox15.TabStop = false;
             // 
             // pictureBox14
             // 
+            this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox14.Image = global::gsb_application.Properties.Resources.stat_app;
-            this.pictureBox14.Location = new System.Drawing.Point(81, 137);
+            this.pictureBox14.Location = new System.Drawing.Point(81, 102);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(333, 250);
+            this.pictureBox14.Size = new System.Drawing.Size(333, 206);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 0;
             this.pictureBox14.TabStop = false;

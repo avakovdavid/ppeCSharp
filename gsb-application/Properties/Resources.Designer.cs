@@ -109,6 +109,13 @@ namespace gsb_application.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap plus {
+            get {
+                object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap resume_prets {
             get {
                 object obj = ResourceManager.GetObject("resume_prets", resourceCulture);

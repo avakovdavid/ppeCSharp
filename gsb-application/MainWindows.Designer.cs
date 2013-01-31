@@ -53,6 +53,7 @@ namespace gsb_application
             // 
             // menu
             // 
+            this.menu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.lesPrêtsToolStripMenuItem,
@@ -204,9 +205,10 @@ namespace gsb_application
             // infoConnexionToolStripMenuItem
             // 
             this.infoConnexionToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.infoConnexionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoConnexionToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.infoConnexionToolStripMenuItem.Name = "infoConnexionToolStripMenuItem";
-            this.infoConnexionToolStripMenuItem.Size = new System.Drawing.Size(157, 20);
+            this.infoConnexionToolStripMenuItem.Size = new System.Drawing.Size(165, 20);
             this.infoConnexionToolStripMenuItem.Text = "Vous n\'êtes pas connectés";
             // 
             // MainWindows

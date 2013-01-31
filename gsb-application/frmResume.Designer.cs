@@ -31,11 +31,11 @@
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.grpBoxMateriel = new System.Windows.Forms.GroupBox();
             this.tableLayoutMat = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDateCirculeMat = new System.Windows.Forms.Label();
             this.lblTypeMat = new System.Windows.Forms.Label();
             this.lblMarqueMat = new System.Windows.Forms.Label();
             this.lblGarantieMat = new System.Windows.Forms.Label();
             this.lblNumMat = new System.Windows.Forms.Label();
-            this.lblDateCirculeMat = new System.Windows.Forms.Label();
             this.grpBoxLicVersion = new System.Windows.Forms.GroupBox();
             this.tableLayoutLicVersion = new System.Windows.Forms.TableLayoutPanel();
             this.lblNumMatLicVersion = new System.Windows.Forms.Label();
@@ -67,8 +67,7 @@
             // 
             // tableLayoutPanel
             // 
-            this.tableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tableLayoutPanel.AutoSize = true;
             this.tableLayoutPanel.ColumnCount = 1;
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -109,11 +108,11 @@
             this.tableLayoutMat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutMat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutMat.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutMat.Controls.Add(this.lblDateCirculeMat, 0, 0);
             this.tableLayoutMat.Controls.Add(this.lblTypeMat, 4, 0);
             this.tableLayoutMat.Controls.Add(this.lblMarqueMat, 3, 0);
             this.tableLayoutMat.Controls.Add(this.lblGarantieMat, 2, 0);
             this.tableLayoutMat.Controls.Add(this.lblNumMat, 0, 0);
-            this.tableLayoutMat.Controls.Add(this.lblDateCirculeMat, 1, 0);
             this.tableLayoutMat.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutMat.Name = "tableLayoutMat";
             this.tableLayoutMat.RowCount = 1;
@@ -121,11 +120,23 @@
             this.tableLayoutMat.Size = new System.Drawing.Size(416, 20);
             this.tableLayoutMat.TabIndex = 0;
             // 
+            // lblDateCirculeMat
+            // 
+            this.lblDateCirculeMat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDateCirculeMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateCirculeMat.Location = new System.Drawing.Point(94, 0);
+            this.lblDateCirculeMat.Name = "lblDateCirculeMat";
+            this.lblDateCirculeMat.Size = new System.Drawing.Size(132, 20);
+            this.lblDateCirculeMat.TabIndex = 5;
+            this.lblDateCirculeMat.Text = "Mise en circulation";
+            // 
             // lblTypeMat
             // 
             this.lblTypeMat.AutoSize = true;
             this.lblTypeMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypeMat.Location = new System.Drawing.Point(378, 0);
+            this.lblTypeMat.Location = new System.Drawing.Point(348, 0);
             this.lblTypeMat.Name = "lblTypeMat";
             this.lblTypeMat.Size = new System.Drawing.Size(35, 13);
             this.lblTypeMat.TabIndex = 4;
@@ -135,7 +146,7 @@
             // 
             this.lblMarqueMat.AutoSize = true;
             this.lblMarqueMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarqueMat.Location = new System.Drawing.Point(323, 0);
+            this.lblMarqueMat.Location = new System.Drawing.Point(293, 0);
             this.lblMarqueMat.Name = "lblMarqueMat";
             this.lblMarqueMat.Size = new System.Drawing.Size(49, 13);
             this.lblMarqueMat.TabIndex = 3;
@@ -145,7 +156,7 @@
             // 
             this.lblGarantieMat.AutoSize = true;
             this.lblGarantieMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGarantieMat.Location = new System.Drawing.Point(262, 0);
+            this.lblGarantieMat.Location = new System.Drawing.Point(232, 0);
             this.lblGarantieMat.Name = "lblGarantieMat";
             this.lblGarantieMat.Size = new System.Drawing.Size(55, 13);
             this.lblGarantieMat.TabIndex = 2;
@@ -160,16 +171,6 @@
             this.lblNumMat.Size = new System.Drawing.Size(85, 13);
             this.lblNumMat.TabIndex = 0;
             this.lblNumMat.Text = "n° du matériel";
-            // 
-            // lblDateCirculeMat
-            // 
-            this.lblDateCirculeMat.AutoSize = true;
-            this.lblDateCirculeMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateCirculeMat.Location = new System.Drawing.Point(94, 0);
-            this.lblDateCirculeMat.Name = "lblDateCirculeMat";
-            this.lblDateCirculeMat.Size = new System.Drawing.Size(162, 13);
-            this.lblDateCirculeMat.TabIndex = 1;
-            this.lblDateCirculeMat.Text = "Date de mise en circulation";
             // 
             // grpBoxLicVersion
             // 
@@ -327,8 +328,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.listBoxQui);
             this.panel1.Controls.Add(this.lblQui);
@@ -397,6 +397,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(784, 492);
             this.Controls.Add(this.tableLayoutPanel);
             this.Controls.Add(this.panel1);
@@ -440,7 +441,6 @@
         private System.Windows.Forms.Label lblTypeMat;
         private System.Windows.Forms.Label lblMarqueMat;
         private System.Windows.Forms.Label lblGarantieMat;
-        private System.Windows.Forms.Label lblDateCirculeMat;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -454,5 +454,6 @@
         private System.Windows.Forms.Label lblNumMatLicVersion;
         private System.Windows.Forms.Label lblNumLicVersion;
         private System.Windows.Forms.Label lblTitreLicVersion;
+        private System.Windows.Forms.Label lblDateCirculeMat;
     }
 }

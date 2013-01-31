@@ -37,6 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.rbtnEmploye = new System.Windows.Forms.RadioButton();
+            this.rbtnAdmin = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlAdmin = new System.Windows.Forms.Panel();
             this.tfdMdpCA = new System.Windows.Forms.TextBox();
             this.btnCreerAdmin = new System.Windows.Forms.Button();
@@ -51,9 +54,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPrenom = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
-            this.rbtnEmploye = new System.Windows.Forms.RadioButton();
-            this.rbtnAdmin = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlEmploye.SuspendLayout();
             this.pnlAdmin.SuspendLayout();
@@ -62,10 +62,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pnlEmploye);
-            this.panel1.Controls.Add(this.pnlAdmin);
             this.panel1.Controls.Add(this.rbtnEmploye);
             this.panel1.Controls.Add(this.rbtnAdmin);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pnlAdmin);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(259, 263);
@@ -91,7 +91,7 @@
             this.btnCreerEmploye.Location = new System.Drawing.Point(82, 112);
             this.btnCreerEmploye.Name = "btnCreerEmploye";
             this.btnCreerEmploye.Size = new System.Drawing.Size(75, 23);
-            this.btnCreerEmploye.TabIndex = 15;
+            this.btnCreerEmploye.TabIndex = 5;
             this.btnCreerEmploye.Text = "Créer";
             this.btnCreerEmploye.UseVisualStyleBackColor = true;
             this.btnCreerEmploye.Click += new System.EventHandler(this.btnCreerEmploye_Click);
@@ -101,14 +101,14 @@
             this.tfdEmailE.Location = new System.Drawing.Point(128, 75);
             this.tfdEmailE.Name = "tfdEmailE";
             this.tfdEmailE.Size = new System.Drawing.Size(100, 20);
-            this.tfdEmailE.TabIndex = 14;
+            this.tfdEmailE.TabIndex = 4;
             // 
             // tfdPrenomE
             // 
             this.tfdPrenomE.Location = new System.Drawing.Point(128, 49);
             this.tfdPrenomE.Name = "tfdPrenomE";
             this.tfdPrenomE.Size = new System.Drawing.Size(100, 20);
-            this.tfdPrenomE.TabIndex = 13;
+            this.tfdPrenomE.TabIndex = 3;
             // 
             // tfdNomE
             // 
@@ -116,7 +116,7 @@
             this.tfdNomE.Location = new System.Drawing.Point(128, 23);
             this.tfdNomE.Name = "tfdNomE";
             this.tfdNomE.Size = new System.Drawing.Size(100, 20);
-            this.tfdNomE.TabIndex = 12;
+            this.tfdNomE.TabIndex = 2;
             // 
             // label2
             // 
@@ -145,6 +145,39 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Nom : ";
             // 
+            // rbtnEmploye
+            // 
+            this.rbtnEmploye.AutoSize = true;
+            this.rbtnEmploye.Location = new System.Drawing.Point(134, 35);
+            this.rbtnEmploye.Name = "rbtnEmploye";
+            this.rbtnEmploye.Size = new System.Drawing.Size(65, 17);
+            this.rbtnEmploye.TabIndex = 1;
+            this.rbtnEmploye.TabStop = true;
+            this.rbtnEmploye.Text = "Employé";
+            this.rbtnEmploye.UseVisualStyleBackColor = true;
+            this.rbtnEmploye.CheckedChanged += new System.EventHandler(this.rbtnEmploye_CheckedChanged);
+            // 
+            // rbtnAdmin
+            // 
+            this.rbtnAdmin.AutoSize = true;
+            this.rbtnAdmin.Location = new System.Drawing.Point(43, 35);
+            this.rbtnAdmin.Name = "rbtnAdmin";
+            this.rbtnAdmin.Size = new System.Drawing.Size(91, 17);
+            this.rbtnAdmin.TabIndex = 0;
+            this.rbtnAdmin.TabStop = true;
+            this.rbtnAdmin.Text = "Administrateur";
+            this.rbtnAdmin.UseVisualStyleBackColor = true;
+            this.rbtnAdmin.CheckedChanged += new System.EventHandler(this.rbtnAdmin_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Choisissez le type de l\'utilisateur : ";
+            // 
             // pnlAdmin
             // 
             this.pnlAdmin.Controls.Add(this.tfdMdpCA);
@@ -172,7 +205,7 @@
             this.tfdMdpCA.Location = new System.Drawing.Point(139, 145);
             this.tfdMdpCA.Name = "tfdMdpCA";
             this.tfdMdpCA.Size = new System.Drawing.Size(100, 20);
-            this.tfdMdpCA.TabIndex = 11;
+            this.tfdMdpCA.TabIndex = 7;
             this.tfdMdpCA.UseSystemPasswordChar = true;
             // 
             // btnCreerAdmin
@@ -180,7 +213,7 @@
             this.btnCreerAdmin.Location = new System.Drawing.Point(82, 169);
             this.btnCreerAdmin.Name = "btnCreerAdmin";
             this.btnCreerAdmin.Size = new System.Drawing.Size(75, 23);
-            this.btnCreerAdmin.TabIndex = 4;
+            this.btnCreerAdmin.TabIndex = 8;
             this.btnCreerAdmin.Text = "Créer";
             this.btnCreerAdmin.UseVisualStyleBackColor = true;
             this.btnCreerAdmin.Click += new System.EventHandler(this.btnCreerAdmin_Click);
@@ -190,7 +223,7 @@
             this.tfdMdpA.Location = new System.Drawing.Point(139, 119);
             this.tfdMdpA.Name = "tfdMdpA";
             this.tfdMdpA.Size = new System.Drawing.Size(100, 20);
-            this.tfdMdpA.TabIndex = 10;
+            this.tfdMdpA.TabIndex = 6;
             this.tfdMdpA.UseSystemPasswordChar = true;
             // 
             // tfdLoginA
@@ -198,28 +231,28 @@
             this.tfdLoginA.Location = new System.Drawing.Point(139, 93);
             this.tfdLoginA.Name = "tfdLoginA";
             this.tfdLoginA.Size = new System.Drawing.Size(100, 20);
-            this.tfdLoginA.TabIndex = 9;
+            this.tfdLoginA.TabIndex = 5;
             // 
             // tfdEmailA
             // 
             this.tfdEmailA.Location = new System.Drawing.Point(139, 67);
             this.tfdEmailA.Name = "tfdEmailA";
             this.tfdEmailA.Size = new System.Drawing.Size(100, 20);
-            this.tfdEmailA.TabIndex = 8;
+            this.tfdEmailA.TabIndex = 4;
             // 
             // tfdPrenomA
             // 
             this.tfdPrenomA.Location = new System.Drawing.Point(139, 41);
             this.tfdPrenomA.Name = "tfdPrenomA";
             this.tfdPrenomA.Size = new System.Drawing.Size(100, 20);
-            this.tfdPrenomA.TabIndex = 7;
+            this.tfdPrenomA.TabIndex = 3;
             // 
             // tfdNomA
             // 
             this.tfdNomA.Location = new System.Drawing.Point(139, 15);
             this.tfdNomA.Name = "tfdNomA";
             this.tfdNomA.Size = new System.Drawing.Size(100, 20);
-            this.tfdNomA.TabIndex = 6;
+            this.tfdNomA.TabIndex = 2;
             // 
             // lblConfirmMdp
             // 
@@ -275,45 +308,14 @@
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom : ";
             // 
-            // rbtnEmploye
-            // 
-            this.rbtnEmploye.AutoSize = true;
-            this.rbtnEmploye.Location = new System.Drawing.Point(134, 35);
-            this.rbtnEmploye.Name = "rbtnEmploye";
-            this.rbtnEmploye.Size = new System.Drawing.Size(65, 17);
-            this.rbtnEmploye.TabIndex = 2;
-            this.rbtnEmploye.TabStop = true;
-            this.rbtnEmploye.Text = "Employé";
-            this.rbtnEmploye.UseVisualStyleBackColor = true;
-            this.rbtnEmploye.CheckedChanged += new System.EventHandler(this.rbtnEmploye_CheckedChanged);
-            // 
-            // rbtnAdmin
-            // 
-            this.rbtnAdmin.AutoSize = true;
-            this.rbtnAdmin.Location = new System.Drawing.Point(43, 35);
-            this.rbtnAdmin.Name = "rbtnAdmin";
-            this.rbtnAdmin.Size = new System.Drawing.Size(91, 17);
-            this.rbtnAdmin.TabIndex = 1;
-            this.rbtnAdmin.TabStop = true;
-            this.rbtnAdmin.Text = "Administrateur";
-            this.rbtnAdmin.UseVisualStyleBackColor = true;
-            this.rbtnAdmin.CheckedChanged += new System.EventHandler(this.rbtnAdmin_CheckedChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Choisissez le type de l\'utilisateur : ";
-            // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 288);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(294, 298);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 326);
             this.MinimizeBox = false;
