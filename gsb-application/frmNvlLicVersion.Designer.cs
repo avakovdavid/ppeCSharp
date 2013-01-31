@@ -57,7 +57,7 @@
             this.lblNumLicVersionAttribue.Location = new System.Drawing.Point(245, 2);
             this.lblNumLicVersionAttribue.Name = "lblNumLicVersionAttribue";
             this.lblNumLicVersionAttribue.Size = new System.Drawing.Size(45, 23);
-            this.lblNumLicVersionAttribue.TabIndex = 11;
+            this.lblNumLicVersionAttribue.TabIndex = 4;
             // 
             // btnAjouter
             // 
@@ -66,7 +66,7 @@
             this.btnAjouter.Location = new System.Drawing.Point(169, 0);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(25, 25);
-            this.btnAjouter.TabIndex = 7;
+            this.btnAjouter.TabIndex = 2;
             this.btnAjouter.UseVisualStyleBackColor = true;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
@@ -77,7 +77,7 @@
             this.btnSupp.Location = new System.Drawing.Point(200, 0);
             this.btnSupp.Name = "btnSupp";
             this.btnSupp.Size = new System.Drawing.Size(25, 25);
-            this.btnSupp.TabIndex = 6;
+            this.btnSupp.TabIndex = 3;
             this.btnSupp.UseVisualStyleBackColor = true;
             this.btnSupp.Click += new System.EventHandler(this.btnSupp_Click);
             // 

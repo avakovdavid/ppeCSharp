@@ -42,15 +42,15 @@
             this.duree = new System.Windows.Forms.Label();
             this.numMaterielAssoc = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.anciennete = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.titreTableau1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.titreTableau1 = new System.Windows.Forms.Label();
+            this.anciennete = new System.Windows.Forms.NumericUpDown();
             this.tableau1.SuspendLayout();
             this.tableau2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.anciennete)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.anciennete)).BeginInit();
             this.SuspendLayout();
             // 
             // tableau1
@@ -58,7 +58,7 @@
             this.tableau1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.tableau1.AutoSize = true;
-            this.tableau1.BackColor = System.Drawing.SystemColors.Control;
+            this.tableau1.BackColor = System.Drawing.Color.Transparent;
             this.tableau1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableau1.ColumnCount = 5;
             this.tableau1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -83,7 +83,7 @@
             // numMateriel
             // 
             this.numMateriel.AutoSize = true;
-            this.numMateriel.BackColor = System.Drawing.SystemColors.Control;
+            this.numMateriel.BackColor = System.Drawing.Color.Transparent;
             this.numMateriel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMateriel.Location = new System.Drawing.Point(4, 1);
             this.numMateriel.Name = "numMateriel";
@@ -94,7 +94,7 @@
             // dateCirculation
             // 
             this.dateCirculation.AutoSize = true;
-            this.dateCirculation.BackColor = System.Drawing.SystemColors.Control;
+            this.dateCirculation.BackColor = System.Drawing.Color.Transparent;
             this.dateCirculation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateCirculation.Location = new System.Drawing.Point(78, 1);
             this.dateCirculation.Name = "dateCirculation";
@@ -105,7 +105,7 @@
             // garantie
             // 
             this.garantie.AutoSize = true;
-            this.garantie.BackColor = System.Drawing.SystemColors.Control;
+            this.garantie.BackColor = System.Drawing.Color.Transparent;
             this.garantie.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.garantie.Location = new System.Drawing.Point(247, 1);
             this.garantie.Name = "garantie";
@@ -116,7 +116,7 @@
             // marque
             // 
             this.marque.AutoSize = true;
-            this.marque.BackColor = System.Drawing.SystemColors.Control;
+            this.marque.BackColor = System.Drawing.Color.Transparent;
             this.marque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marque.Location = new System.Drawing.Point(309, 1);
             this.marque.Name = "marque";
@@ -127,7 +127,7 @@
             // type
             // 
             this.type.AutoSize = true;
-            this.type.BackColor = System.Drawing.SystemColors.Control;
+            this.type.BackColor = System.Drawing.Color.Transparent;
             this.type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.type.Location = new System.Drawing.Point(365, 1);
             this.type.Name = "type";
@@ -239,9 +239,43 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(694, 119);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.titreTableau1);
+            this.panel1.Controls.Add(this.anciennete);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(431, 29);
+            this.panel1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(367, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "an(s)";
+            // 
+            // titreTableau1
+            // 
+            this.titreTableau1.AutoSize = true;
+            this.titreTableau1.BackColor = System.Drawing.Color.Transparent;
+            this.titreTableau1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titreTableau1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.titreTableau1.Location = new System.Drawing.Point(0, 5);
+            this.titreTableau1.Name = "titreTableau1";
+            this.titreTableau1.Size = new System.Drawing.Size(306, 17);
+            this.titreTableau1.TabIndex = 0;
+            this.titreTableau1.Text = "Sélectionnez l\'ancienneté des matériels :";
+            // 
             // anciennete
             // 
-            this.anciennete.Location = new System.Drawing.Point(220, 2);
+            this.anciennete.Location = new System.Drawing.Point(312, 6);
             this.anciennete.Maximum = new decimal(new int[] {
             10,
             0,
@@ -264,59 +298,27 @@
             0});
             this.anciennete.ValueChanged += new System.EventHandler(this.anciennete_ValueChanged);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.titreTableau1);
-            this.panel1.Controls.Add(this.anciennete);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 29);
-            this.panel1.TabIndex = 6;
-            // 
-            // titreTableau1
-            // 
-            this.titreTableau1.AutoSize = true;
-            this.titreTableau1.BackColor = System.Drawing.SystemColors.Control;
-            this.titreTableau1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titreTableau1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.titreTableau1.Location = new System.Drawing.Point(0, 2);
-            this.titreTableau1.Name = "titreTableau1";
-            this.titreTableau1.Size = new System.Drawing.Size(218, 17);
-            this.titreTableau1.TabIndex = 0;
-            this.titreTableau1.Text = "Les materiels qui ont plus de";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(273, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "an(s) d\'ancienneté :";
-            // 
             // statistiqueMateriel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(739, 328);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "statistiqueMateriel";
             this.ShowIcon = false;
-            this.Text = "Statistique Materiel";
+            this.Text = "Statistique des materiel";
             this.tableau1.ResumeLayout(false);
             this.tableau1.PerformLayout();
             this.tableau2.ResumeLayout(false);
             this.tableau2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.anciennete)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.anciennete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

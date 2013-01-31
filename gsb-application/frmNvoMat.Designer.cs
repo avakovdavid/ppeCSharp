@@ -68,7 +68,7 @@
             0});
             this.garantieMat.Name = "garantieMat";
             this.garantieMat.Size = new System.Drawing.Size(45, 20);
-            this.garantieMat.TabIndex = 7;
+            this.garantieMat.TabIndex = 3;
             this.garantieMat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNumMatAttribue
@@ -87,7 +87,7 @@
             this.btnAjouter.Location = new System.Drawing.Point(495, 1);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(25, 25);
-            this.btnAjouter.TabIndex = 5;
+            this.btnAjouter.TabIndex = 4;
             this.btnAjouter.UseVisualStyleBackColor = true;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
@@ -98,7 +98,7 @@
             this.btnSupp.Location = new System.Drawing.Point(526, 1);
             this.btnSupp.Name = "btnSupp";
             this.btnSupp.Size = new System.Drawing.Size(25, 25);
-            this.btnSupp.TabIndex = 4;
+            this.btnSupp.TabIndex = 5;
             this.btnSupp.UseVisualStyleBackColor = true;
             this.btnSupp.Click += new System.EventHandler(this.btnSupp_Click);
             // 

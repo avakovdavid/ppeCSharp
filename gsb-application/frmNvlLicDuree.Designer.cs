@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNvlLicDuree));
             this.panel = new System.Windows.Forms.Panel();
+            this.dureeLicence = new System.Windows.Forms.NumericUpDown();
             this.lblNumLicDureeAttribue = new System.Windows.Forms.Label();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnSupp = new System.Windows.Forms.Button();
             this.txtBoxNumMatAssoc = new System.Windows.Forms.TextBox();
             this.txtBoxNomVersion = new System.Windows.Forms.TextBox();
             this.dateDebut = new System.Windows.Forms.DateTimePicker();
-            this.dureeLicence = new System.Windows.Forms.NumericUpDown();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dureeLicence)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,19 @@
             this.panel.Size = new System.Drawing.Size(554, 27);
             this.panel.TabIndex = 3;
             // 
+            // dureeLicence
+            // 
+            this.dureeLicence.Location = new System.Drawing.Point(296, 3);
+            this.dureeLicence.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.dureeLicence.Name = "dureeLicence";
+            this.dureeLicence.Size = new System.Drawing.Size(55, 20);
+            this.dureeLicence.TabIndex = 2;
+            this.dureeLicence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lblNumLicDureeAttribue
             // 
             this.lblNumLicDureeAttribue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,7 +75,7 @@
             this.lblNumLicDureeAttribue.Location = new System.Drawing.Point(497, 2);
             this.lblNumLicDureeAttribue.Name = "lblNumLicDureeAttribue";
             this.lblNumLicDureeAttribue.Size = new System.Drawing.Size(45, 23);
-            this.lblNumLicDureeAttribue.TabIndex = 10;
+            this.lblNumLicDureeAttribue.TabIndex = 6;
             // 
             // btnAjouter
             // 
@@ -71,7 +84,7 @@
             this.btnAjouter.Location = new System.Drawing.Point(422, 0);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(25, 25);
-            this.btnAjouter.TabIndex = 9;
+            this.btnAjouter.TabIndex = 4;
             this.btnAjouter.UseVisualStyleBackColor = true;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
@@ -82,7 +95,7 @@
             this.btnSupp.Location = new System.Drawing.Point(453, 0);
             this.btnSupp.Name = "btnSupp";
             this.btnSupp.Size = new System.Drawing.Size(25, 25);
-            this.btnSupp.TabIndex = 8;
+            this.btnSupp.TabIndex = 5;
             this.btnSupp.UseVisualStyleBackColor = true;
             this.btnSupp.Click += new System.EventHandler(this.btnSupp_Click);
             // 
@@ -98,27 +111,14 @@
             this.txtBoxNomVersion.Location = new System.Drawing.Point(3, 3);
             this.txtBoxNomVersion.Name = "txtBoxNomVersion";
             this.txtBoxNomVersion.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxNomVersion.TabIndex = 1;
+            this.txtBoxNomVersion.TabIndex = 0;
             // 
             // dateDebut
             // 
             this.dateDebut.Location = new System.Drawing.Point(109, 3);
             this.dateDebut.Name = "dateDebut";
             this.dateDebut.Size = new System.Drawing.Size(177, 20);
-            this.dateDebut.TabIndex = 0;
-            // 
-            // dureeLicence
-            // 
-            this.dureeLicence.Location = new System.Drawing.Point(296, 3);
-            this.dureeLicence.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.dureeLicence.Name = "dureeLicence";
-            this.dureeLicence.Size = new System.Drawing.Size(55, 20);
-            this.dureeLicence.TabIndex = 11;
-            this.dureeLicence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dateDebut.TabIndex = 1;
             // 
             // frmNvlLicDuree
             // 

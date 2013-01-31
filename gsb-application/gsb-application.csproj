@@ -291,9 +291,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\valider.png.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ok.png" />
   </ItemGroup>
   <ItemGroup>
@@ -303,21 +300,22 @@
     <None Include="Resources\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\changer_mdp1.png" />
+    <None Include="Resources\changer_mdp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\new_employe1.png" />
+    <None Include="Resources\new_employe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\new_admin1.png" />
+    <None Include="Resources\new_admin.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\connexion1.png" />
+    <None Include="Resources\connexion.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="logoFinal.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\plus.png" />
     <None Include="Resources\stat_materiel.png" />
     <None Include="Resources\stat_app.png" />
     <None Include="Resources\saisie_prets.png" />

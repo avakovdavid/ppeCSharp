@@ -34,6 +34,7 @@ namespace gsb_application
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConnect));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.btnConnexion = new System.Windows.Forms.Button();
             this.tfdMdp = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@ namespace gsb_application
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.imgLogo);
             this.panel1.Controls.Add(this.btnConnexion);
             this.panel1.Controls.Add(this.tfdMdp);
@@ -56,6 +58,17 @@ namespace gsb_application
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 238);
             this.panel1.TabIndex = 4;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(159, 222);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(101, 13);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Mot de passe perdu";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // imgLogo
             // 
@@ -69,7 +82,7 @@ namespace gsb_application
             // 
             // btnConnexion
             // 
-            this.btnConnexion.Location = new System.Drawing.Point(88, 212);
+            this.btnConnexion.Location = new System.Drawing.Point(90, 196);
             this.btnConnexion.Name = "btnConnexion";
             this.btnConnexion.Size = new System.Drawing.Size(86, 23);
             this.btnConnexion.TabIndex = 4;
@@ -79,7 +92,7 @@ namespace gsb_application
             // 
             // tfdMdp
             // 
-            this.tfdMdp.Location = new System.Drawing.Point(113, 176);
+            this.tfdMdp.Location = new System.Drawing.Point(113, 168);
             this.tfdMdp.Name = "tfdMdp";
             this.tfdMdp.Size = new System.Drawing.Size(100, 20);
             this.tfdMdp.TabIndex = 3;
@@ -89,7 +102,7 @@ namespace gsb_application
             // lblMdp
             // 
             this.lblMdp.AutoSize = true;
-            this.lblMdp.Location = new System.Drawing.Point(28, 179);
+            this.lblMdp.Location = new System.Drawing.Point(28, 171);
             this.lblMdp.Name = "lblMdp";
             this.lblMdp.Size = new System.Drawing.Size(79, 13);
             this.lblMdp.TabIndex = 2;
@@ -98,7 +111,7 @@ namespace gsb_application
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(28, 139);
+            this.lblLogin.Location = new System.Drawing.Point(28, 145);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(38, 13);
             this.lblLogin.TabIndex = 1;
@@ -107,7 +120,7 @@ namespace gsb_application
             // tfdLogin
             // 
             this.tfdLogin.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tfdLogin.Location = new System.Drawing.Point(113, 136);
+            this.tfdLogin.Location = new System.Drawing.Point(113, 142);
             this.tfdLogin.Name = "tfdLogin";
             this.tfdLogin.Size = new System.Drawing.Size(100, 20);
             this.tfdLogin.TabIndex = 0;
@@ -117,6 +130,7 @@ namespace gsb_application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -143,5 +157,6 @@ namespace gsb_application
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox tfdLogin;
         private System.Windows.Forms.PictureBox imgLogo;
+        private LinkLabel linkLabel1;
     }
 }

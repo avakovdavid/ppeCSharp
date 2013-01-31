@@ -80,6 +80,7 @@ namespace gsb_application
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.chbLicVersion);
@@ -97,7 +98,7 @@ namespace gsb_application
             this.listBox1.Location = new System.Drawing.Point(61, 11);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(116, 69);
-            this.listBox1.TabIndex = 6;
+            this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
@@ -115,7 +116,7 @@ namespace gsb_application
             this.chbLicVersion.Location = new System.Drawing.Point(247, 57);
             this.chbLicVersion.Name = "chbLicVersion";
             this.chbLicVersion.Size = new System.Drawing.Size(127, 17);
-            this.chbLicVersion.TabIndex = 4;
+            this.chbLicVersion.TabIndex = 3;
             this.chbLicVersion.Text = "Licence(s) de version";
             this.chbLicVersion.UseVisualStyleBackColor = true;
             this.chbLicVersion.CheckedChanged += new System.EventHandler(this.chbLicVersion_CheckedChanged);
@@ -126,7 +127,7 @@ namespace gsb_application
             this.chbLicDuree.Location = new System.Drawing.Point(247, 34);
             this.chbLicDuree.Name = "chbLicDuree";
             this.chbLicDuree.Size = new System.Drawing.Size(120, 17);
-            this.chbLicDuree.TabIndex = 3;
+            this.chbLicDuree.TabIndex = 2;
             this.chbLicDuree.Text = "Licence(s) de durée";
             this.chbLicDuree.UseVisualStyleBackColor = true;
             this.chbLicDuree.CheckedChanged += new System.EventHandler(this.chbLicDuree_CheckedChanged);
@@ -137,7 +138,7 @@ namespace gsb_application
             this.chbMateriel.Location = new System.Drawing.Point(247, 11);
             this.chbMateriel.Name = "chbMateriel";
             this.chbMateriel.Size = new System.Drawing.Size(74, 17);
-            this.chbMateriel.TabIndex = 2;
+            this.chbMateriel.TabIndex = 1;
             this.chbMateriel.Text = "Matériel(s)";
             this.chbMateriel.UseVisualStyleBackColor = true;
             this.chbMateriel.CheckedChanged += new System.EventHandler(this.chbMateriel_CheckedChanged);
@@ -491,12 +492,13 @@ namespace gsb_application
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(820, 515);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmSaisie";
+            this.ShowIcon = false;
             this.Text = "Saisie d\'un prêt";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
