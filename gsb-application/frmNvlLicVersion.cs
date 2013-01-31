@@ -65,7 +65,7 @@ namespace gsb_application
         /// <param name="e"></param>
         public void btnSupp_Click(object sender, EventArgs e)
         {
-            if (!this.lblNumLicVersionAttribue.Equals(""))
+            if (!this.lblNumLicVersionAttribue.Text.Equals(""))
             {
                 //nous allons devoir effectuer sa suppression dans la base de donnée : 
                 Mysql m = new Mysql();
