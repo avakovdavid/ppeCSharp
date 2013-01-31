@@ -121,22 +121,197 @@
     <value>False</value>
   </metadata>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>	Pour vous connecter vous devez avoir un login et un mot de passe. Si vous ne les avez pas, veuillez contacter un administrateur. 
-Dans le cas contraire, entrez vos identifiants dans les champs spécifiques et appuyez sur la touche "Entrer" du clavier ou cliquez directement sur le bouton "Se connecter".
-Un message vous indiquera si vous êtes connectés. 
-	En cas de perte de vos identifiants vous pouvez vous rendre sur notre site internet dans la séction "Récupération de mot de passe" : http://gsb-informatique.hostzi.com/</value>
+    <value>Pour vous connecter vous devez posséder un login et un mot de passe. Si vous n'en possédez pas, veuillez contacter un administrateur. 
+
+Saisissez votre login et votre mot de passe dans leurs champs respectifs puis cliquez  sur le bouton "Se connecter" ou bien appuyez sur la touche "Entrer" du clavier.
+Si vous êtes bien connecté, un message vous l'indiquera.
+
+En cas de perte de vos identifiants, vous pouvez vous rendre sur notre site internet dans la section "récupération de mot de passe" : http://gsb-informatique.hostzi.com/</value>
   </data>
   <metadata name="richTextBox2.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <data name="richTextBox2.Text" xml:space="preserve">
-    <value>	Si vous souhaitez changer ou modifier votre mot de passe vous n'avez qu'à remplire ce formulaire. 
-Pour que la modification soit prise en compte, vous devez indiquer premièrement votre mot de passe actuel, puis entrer deux fois votre nouveau mot de passe.</value>
+    <value>Si vous souhaitez modifier votre mot de passe, utilisez l'option "changer de mot de passe" dans le module "profil" (ctrl + P). 
+
+Vous devez indiquer votre mot de passe actuel, puis saisir deux fois votre nouveau mot de passe.
+
+Terminez en validant.</value>
   </data>
   <metadata name="richTextBox3.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <data name="richTextBox3.Text" xml:space="preserve">
-    <value>	Si vous souhaitez souhaitez créer un nouvel utilisateur vous devez savoir qu'il y en a deux type : Employé et Administrateur. Les employés n'ont pas le droit de se connecter à l'application contrairement aux administrateurs. En revanche les deux types peuvent emprunter des matériels.</value>
+    <value>Pour ajouter une personne dans la base de données utilisez l'option "créer un utilisateur" dans le module "administration" (ctrl + U).
+
+Il existe deux types de personnes : employé et administrateur.
+
+Les employés ne peuvent se connecter à l'application. Ils sont juste présent dans la base de données pour que l'on puisse leur attribuer des matériels.
+Les administrateurs possèdent les mêmes caractéristiques qu'un employé, mais peuvent également utiliser l'application.
+
+Pour créer une personne, vous devez sélectionner le type de cette dernière, remplir tous les champs puis valider. </value>
+  </data>
+  <metadata name="richTextBox4.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="richTextBox4.Text" xml:space="preserve">
+    <value>Pour avoir un aperçu du résumé des prêts, utiliser l'option "consulter les prêts" dans le module "prêts" (ctrl + K).
+
+Sélectionnez une personne dans la liste. 
+Tous les prêts de cette personne seront affiché dans trois tableaux représentant les différents matériels : matériel physique, licence de durée et licence de version.
+
+Le bouton          sert à supprimer un matériel.
+
+Le bouton          sert à modifier les données du matériel.</value>
+  </data>
+  <metadata name="richTextBox5.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="richTextBox5.Text" xml:space="preserve">
+    <value>Pour pouvoir attribuer du matériel à une personne , utilisez l'option "nouveau prêt" dans le module "prêts" (ctrl + N).
+
+Sélectionner une personne dans la liste puis sélectionner le type de matériel à lui attribuer.
+Les formulaires correspondants vont apparaitre.
+Tous les champs doivent être corrects et remplis. 
+
+
+Le bouton          sert à valider le prêt du matériel.
+
+Le bouton          sert à supprimer un matériel. 
+
+Le bouton          sert à ajouter une ligne pour pouvoir saisir plusieurs matériels.</value>
+  </data>
+  <metadata name="richTextBox6.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>Bienvenue dans le manuel d'utilisation !
+
+Vous trouverez ici quelques explications concernant le fonctionnement de l'application GSB.
+
+Cette application est divisée en plusieurs modules que vous pouvez ouvrir à l'aide du menu horizontal de l'application. 
+Chaque onglet du manuel d'utilisation vous présente le fonctionnement et les principales fonctions de chaque module.</value>
+  </data>
+  <metadata name="richTextBox7.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="richTextBox8.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="richTextBox11.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="richTextBox11.Text" xml:space="preserve">
+    <value>Dans le module "statistique", il vous est donné un aperçu de l'application et du matériel sous forme de diverses statistiques.
+
+Vous trouverez dans ce module deux options : l'option "statistiques de l'application" et l'option "statistiques matériel". 
+
+Comme leur nom l'indique, l'une donne des statistiques sur l'application l'autre sur les matériels présents dans la base de données.</value>
+  </data>
+  <metadata name="richTextBox9.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
 </root>

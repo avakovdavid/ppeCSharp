@@ -24,4 +24,6 @@ C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\D
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.modifLicDuree.resources
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.modifLicVersion.resources
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\MySql.Data.dll
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\logoFinal.ico
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Debug\gsb_application.modifMateriel.resources
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Debug\gsb-application.XML

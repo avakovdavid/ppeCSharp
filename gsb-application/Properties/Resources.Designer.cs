@@ -74,23 +74,16 @@ namespace gsb_application.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap connexion1 {
+        internal static System.Drawing.Bitmap edit {
             get {
-                object obj = ResourceManager.GetObject("connexion1", resourceCulture);
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap menu_co {
+        internal static System.Drawing.Bitmap logo {
             get {
-                object obj = ResourceManager.GetObject("menu_co", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap menu_deco {
-            get {
-                object obj = ResourceManager.GetObject("menu_deco", resourceCulture);
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,6 +98,48 @@ namespace gsb_application.Properties {
         internal static System.Drawing.Bitmap new_employe {
             get {
                 object obj = ResourceManager.GetObject("new_employe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ok {
+            get {
+                object obj = ResourceManager.GetObject("ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap resume_prets {
+            get {
+                object obj = ResourceManager.GetObject("resume_prets", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap saisie_prets {
+            get {
+                object obj = ResourceManager.GetObject("saisie_prets", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap stat_app {
+            get {
+                object obj = ResourceManager.GetObject("stat_app", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap stat_materiel {
+            get {
+                object obj = ResourceManager.GetObject("stat_materiel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap supp {
+            get {
+                object obj = ResourceManager.GetObject("supp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1416,9 +1416,15 @@
             </summary>
             <returns>personne connectée actuellement sur l'application</returns>
         </member>
+        <member name="M:gsb_application.MainWindows.getInfoConnexion">
+            <summary>
+            Getter pour l'item du menu qui affiche la personne connectée
+            </summary>
+            <returns>l'item de la personne connectée à droit du menu</returns>
+        </member>
         <member name="M:gsb_application.MainWindows.setPersConnect(System.Object)">
             <summary>
-            Setter pour la personne connectée (qui vient de se connecter
+            Setter pour la personne connectée (qui vient de se connecter)
             </summary>
             <param name="p">personne qui vient de se connecter</param>
         </member>

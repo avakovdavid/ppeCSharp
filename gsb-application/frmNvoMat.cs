@@ -42,10 +42,10 @@ namespace gsb_application
             }
 
             this.cBoxMarque.DataSource = dataMarque;
-            this.cBoxMarque.DropDownStyle = ComboBoxStyle.DropDownList; //rend la liste inmodifiable 
+            //this.cBoxMarque.DropDownStyle = ComboBoxStyle.DropDownList; //rend la liste inmodifiable 
 
             this.cBoxType.DataSource = dataType;
-            this.cBoxType.DropDownStyle = ComboBoxStyle.DropDownList; //rend la liste inmodifiable
+            //this.cBoxType.DropDownStyle = ComboBoxStyle.DropDownList; //rend la liste inmodifiable
 
         }
 
@@ -141,8 +141,8 @@ namespace gsb_application
 
             //on remplis le tableau associatif avec les données : 
             Hashtable ht = new Hashtable();
-            ht.Add("marque", this.cBoxMarque.SelectedValue);
-            ht.Add("type", this.cBoxType.SelectedValue);
+            ht.Add("marque", this.cBoxMarque.Text);
+            ht.Add("type", this.cBoxType.Text);
             ht.Add("date", this.dateTimePicker2.Value.Year + "/" + this.dateTimePicker2.Value.Month + "/" + this.dateTimePicker2.Value.Day);
             ht.Add("garantie", this.garantieMat.Value);
             ht.Add("id_pers", lesPers.ElementAt(this.frmParent.getListBox().SelectedIndex).getIdPersonne());

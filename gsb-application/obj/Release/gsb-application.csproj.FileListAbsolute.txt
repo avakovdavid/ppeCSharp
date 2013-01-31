@@ -17,8 +17,8 @@ C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\R
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Release\gsb_application.frmNvoMat.resources
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Release\gsb_application.statistiqueMateriel.resources
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Release\gsb_application.StatistiquesDeLapp.resources
-C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Release\gsb-application.XML
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Release\gsb_application.Aide.resources
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\bin\Release\MySql.Data.dll
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Release\gsb_application.modifLicDuree.resources
 C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Release\gsb_application.modifLicVersion.resources
+C:\Users\DAVID\Dropbox\Les Workspace\WS-C#\gsb-application\gsb-application\obj\Release\gsb_application.modifMateriel.resources

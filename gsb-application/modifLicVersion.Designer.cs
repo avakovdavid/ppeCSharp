@@ -141,6 +141,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(344, 193);
             this.Name = "modifLicVersion";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modification de la licence de version ";
             this.panel1.ResumeLayout(false);

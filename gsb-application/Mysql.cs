@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Security.Cryptography;
 using System.Collections;
+using System.Windows.Forms;
 
 namespace gsb_application
 {
@@ -32,10 +33,7 @@ namespace gsb_application
             {
 
                 //this.connectionString = "Server=instance34367.db.xeround.com; Port=16301; Database=test; Uid=david; Pwd=test;"; //hébérgé marche
-                
-                //this.connectionString = "Server=mysql11.000webhost.com;Database=a5300961_gsb;Uid=a5300961_david;Pwd=abc123;"; //hébérgé
-                //this.connectionString = "Server=172.17.199.235;Database=test;Uid=root;Pwd=test;"; //local
-                
+                                
                 this.connectionString = ConfigurationManager.ConnectionStrings["bdd"].ConnectionString;
                 this.connexion = new MySqlConnection(this.connectionString);
                 connexion.Open();
@@ -78,7 +76,7 @@ namespace gsb_application
             List<Type_personne> lesTypePersonne = this.getLesTypePersonne();
             
             int i = 0;
-            String req = "SELECT * FROM PERSONNE;";
+            String req = "SELECT * FROM PERSONNE ORDER BY nom_personne, prenom_personne ASC;";
             MySqlCommand sqlCommand = new MySqlCommand(req, connexion);
 
             IDataReader reader = sqlCommand.ExecuteReader();
@@ -197,6 +195,101 @@ namespace gsb_application
             // fermeture reader
             reader.Close();
             return lesMateriel;
+        }
+
+        public Materiel getMateriel(int id)
+        {
+            Materiel materiel;
+            List<Marque> lesMarque = this.getLesMarque();
+            List<Type_materiel> lesTypeMateriel = this.getLesTypeMateriel();
+            List<Personne> lesPersonne = this.getLesPersonne();
+
+            int i = 0;
+            String req = "SELECT * FROM MATERIEL WHERE id_materiel=" + id;
+            MySqlCommand sqlCommand = new MySqlCommand(req, connexion);
+
+            IDataReader reader = sqlCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                Personne personne = lesPersonne.Find(p => p.getIdPersonne() == int.Parse(reader[3].ToString()));
+                Marque marque = lesMarque.Find(m => m.getIdMarque() == int.Parse(reader[4].ToString()));
+                Type_materiel type = lesTypeMateriel.Find(t => t.getIdTypeMateriel() == int.Parse(reader[5].ToString()));
+
+                materiel = new Materiel(int.Parse(reader[0].ToString()), DateTime.Parse(reader[1].ToString()), int.Parse(reader[2].ToString()), personne, marque, type);
+                i++;
+                reader.Close();
+                return materiel;
+            }
+            reader.Close();
+
+            throw new Exception("Pas de matériel avec l'identifiant : " + id);
+        }
+
+        public void updateMateriel(Hashtable ht)
+        {
+            //RECHERCHE DE L'IDENTIFIANT DE LA MARQUE DU MATERIEL
+            int i = 0;
+            MySqlCommand sqlCommandMarque = new MySqlCommand("SELECT id_marque FROM MARQUE WHERE nom_marque LIKE '" + ht["marque"] + "' LIMIT 0,1;", connexion);
+            IDataReader readerMarque = sqlCommandMarque.ExecuteReader();
+            while (readerMarque.Read())
+            {
+                ht.Add("id_marque", readerMarque[0].ToString());
+                i++;
+            }
+            readerMarque.Close();
+
+            //si i == 0 alors la marque n'a pas été trouvée dans la base donc nous allons ajouter une nouvelle marque : 
+            if (i == 0)
+            {
+                if (ht["marque"].Equals(""))
+                {
+                    throw new Exception("Toutes les données obligatoires doivent être renseignées.");
+                }
+                else
+                {
+                    String reqNvlMarque = "INSERT INTO MARQUE VALUES (default, '" + ht["marque"] + "'); SELECT LAST_INSERT_ID();";
+                    MySqlCommand sqlCommandNvlMarque = new MySqlCommand(reqNvlMarque, connexion);
+                    ht["id_marque"] = (int)Convert.ToInt32(sqlCommandNvlMarque.ExecuteScalar());
+                }
+            }
+
+            //RECHERCHE DE L'IDENTIFIANT DU TYPE DU MATERIEL
+            int j = 0;
+            MySqlCommand sqlCommandType = new MySqlCommand("SELECT id_type_materiel FROM TYPE_MATERIEL WHERE type_materiel LIKE '" + ht["type"] + "' LIMIT 0,1;", connexion);
+            IDataReader readerType = sqlCommandType.ExecuteReader();
+            while (readerType.Read())
+            {
+                ht.Add("id_type", readerType[0].ToString());
+                j++;
+            }
+            readerType.Close();
+
+            //si j == 0 alors le type n'a pas été trouvé dans la base donc nous allons ajouter un nouveau type : 
+            if (j == 0)
+            {
+                if (ht["type"].Equals(""))
+                {
+                    throw new Exception("Toutes les données obligatoires doivent être renseignées.");
+                }
+                else
+                {
+                    String reqNvoType = "INSERT INTO Type_MATERIEL VALUES (default, '" + ht["type"] + "'); SELECT LAST_INSERT_ID();";
+                    MySqlCommand sqlCommandNvoType = new MySqlCommand(reqNvoType, connexion);
+                    ht["id_type"] = (int)Convert.ToInt32(sqlCommandNvoType.ExecuteScalar());
+                }
+            }
+
+            try
+            {
+                String req = "UPDATE MATERIEL SET date_circulation='" + ht["date"] + "', garantie=" + ht["garantie"] + ", id_marque=" + ht["id_marque"] + ", id_type_materiel=" + ht["id_type"] + " WHERE id_materiel=" + ht["id"];
+
+                MySqlCommand sqlCommand = new MySqlCommand(req, connexion);
+                IDataReader reader = sqlCommand.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Les modification n'ont pas pu être appliquées, veuillez recommencer.");
+            }            
         }
 
         /// <summary>
@@ -548,8 +641,9 @@ namespace gsb_application
         /// <summary>
         /// Getter des matériels qui ont plus de 5 ans d'ancienneté 
         /// </summary>
+        /// <param name="nb_annees">nombre d'années d'ancienneté des matériel</param>
         /// <returns>liste des matériels de plus de 5 ans d'ancienneté</returns>
-        public List<Materiel> getLesStatMateriel()
+        public List<Materiel> getLesStatMateriel(int nb_annees)
         {
             List<Materiel> lesMateriel = new List<Materiel>();
 
@@ -557,9 +651,10 @@ namespace gsb_application
             List<Type_materiel> lesTypeMateriel = this.getLesTypeMateriel();
             List<Personne> lesPersonne = this.getLesPersonne();
 
+            int duree_jours = 365 * nb_annees;
 
             int i = 0;
-            String req = "SELECT *, nom_marque FROM MATERIEL, MARQUE, TYPE_MATERIEL WHERE DATEDIFF( NOW(),date_circulation)  >= 1825 GROUP BY id_materiel";
+            String req = "SELECT *, nom_marque FROM MATERIEL, MARQUE, TYPE_MATERIEL WHERE DATEDIFF( NOW(),date_circulation)  >= "+ duree_jours +" GROUP BY id_materiel";
             MySqlCommand sqlCommand = new MySqlCommand(req, connexion);
 
             IDataReader reader = sqlCommand.ExecuteReader();
@@ -844,6 +939,21 @@ namespace gsb_application
                 }
                 readerMarque.Close();
 
+                //si i == 0 alors la marque n'a pas été trouvée dans la base donc nous allons ajouter une nouvelle marque : 
+                if (i == 0)
+                {
+                    if (ht["marque"].Equals(""))
+                    {
+                        throw new Exception("Toutes les données obligatoires doivent être renseignées.");
+                    }
+                    else
+                    {
+                        String reqNvlMarque = "INSERT INTO MARQUE VALUES (default, '" + ht["marque"] + "'); SELECT LAST_INSERT_ID();";
+                        MySqlCommand sqlCommandNvlMarque = new MySqlCommand(reqNvlMarque, connexion);
+                        ht["id_marque"] = (int)Convert.ToInt32(sqlCommandNvlMarque.ExecuteScalar());
+                    }
+                }
+
                 //RECHERCHE DE L'IDENTIFIANT DU TYPE DU MATERIEL
                 int j = 0;
                 MySqlCommand sqlCommandType = new MySqlCommand("SELECT id_type_materiel FROM TYPE_MATERIEL WHERE type_materiel LIKE '" + ht["type"] + "' LIMIT 0,1;", connexion);
@@ -854,6 +964,21 @@ namespace gsb_application
                     j++;
                 }
                 readerType.Close();
+
+                //si j == 0 alors le type n'a pas été trouvé dans la base donc nous allons ajouter un nouveau type : 
+                if (i == 0)
+                {
+                    if (ht["type"].Equals(""))
+                    {
+                        throw new Exception("Toutes les données obligatoires doivent être renseignées.");
+                    }
+                    else
+                    {
+                        String reqNvoType = "INSERT INTO TYPE_MATERIEL VALUES (default, '" + ht["type"] + "'); SELECT LAST_INSERT_ID();";
+                        MySqlCommand sqlCommandNvoType = new MySqlCommand(reqNvoType, connexion);
+                        ht["id_type"] = (int)Convert.ToInt32(sqlCommandNvoType.ExecuteScalar());
+                    }
+                }
 
                 String reqInsertMat = "INSERT INTO MATERIEL VALUES (default, '" + ht["date"] + "', '" + ht["garantie"] + "', '" + ht["id_pers"] + "', '" + ht["id_marque"] + "', '" + ht["id_type"] + "'); SELECT LAST_INSERT_ID();";
                 MySqlCommand sqlCommand = new MySqlCommand(reqInsertMat, connexion);
@@ -1027,6 +1152,60 @@ namespace gsb_application
             {
                 throw ex;
             }
+        }
+
+        /// <summary>
+        /// focntion qui permet de récupèrer sous forme d'un tableau associatif quelque données statistiques sur l'application : nombre d'utilisateur, d'administrateurs, de matériels ou de licences prêtés
+        /// </summary>
+        /// <returns>tableau associatif de type Hashtable contenant les données statistiques</returns>
+        public Hashtable statDeLapp()
+        {
+            Hashtable az = new Hashtable();
+            String req = "SELECT COUNT(NULLIF(administrateur,0)) AS 'sont_admin', COUNT(*) AS 'total' FROM PERSONNE";
+            MySqlCommand sqlCommand = new MySqlCommand(req, connexion);
+            IDataReader reader = sqlCommand.ExecuteReader();
+            // Nombre total d'utilisateur + admin
+            while (reader.Read())
+            {
+                az.Add("sont_admin", reader[0].ToString());
+                az.Add("total", reader[1].ToString());
+            }
+            reader.Close();
+
+            String req1 = "SELECT COUNT(DISTINCT id_personne) as nb_pers, count(*) as nb_materiel FROM MATERIEL";
+            MySqlCommand sqlCommand1 = new MySqlCommand(req1, connexion);
+            IDataReader reader1 = sqlCommand1.ExecuteReader();
+            // Nombre de materiel + nombre utilisateur qui utilise des materiels
+            while (reader1.Read())
+            {
+                az.Add("nb_pers", reader1[0].ToString());
+                az.Add("nb_materiel", reader1[1].ToString());
+            }
+            reader1.Close();
+            
+            String req2 = "SELECT COUNT(DISTINCT id_personne) as nb_pers, count(*) as nb_lic_duree FROM LICENCE_DUREE";
+            MySqlCommand sqlCommand2 = new MySqlCommand(req2, connexion);
+            IDataReader reader2 = sqlCommand2.ExecuteReader();
+            // Nombre de licence duree + nombre utilisateur qui utilise des licences de duree
+            while (reader2.Read())
+            {
+                az.Add("nb_pers_licenceD", reader2[0].ToString());
+                az.Add("nb_licenceD", reader2[1].ToString());
+            }
+            reader2.Close();
+
+            String req3 = "SELECT COUNT(DISTINCT id_personne) as nb_pers, count(*) as nb_lic_duree FROM LICENCE_VERSION";
+            MySqlCommand sqlCommand3 = new MySqlCommand(req3, connexion);
+            IDataReader reader3 = sqlCommand3.ExecuteReader();
+            // Nombre de licence duree + nombre utilisateur qui utilise des licences de version
+            while (reader3.Read())
+            {
+                az.Add("nb_pers_licenceV", reader3[0].ToString());
+                az.Add("nb_licenceV", reader3[1].ToString());
+            }
+            reader3.Close();
+
+            return az;
         }
     }
 }

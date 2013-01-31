@@ -84,10 +84,7 @@ namespace gsb_application
             this.tfdMdp.Size = new System.Drawing.Size(100, 20);
             this.tfdMdp.TabIndex = 3;
             this.tfdMdp.UseSystemPasswordChar = true;
-
-            //pour écouter les événements des touches (connexion par la touche entrer du clavier)
-            this.tfdMdp.KeyDown += new KeyEventHandler(this.btnConnexion_KeyDown);
-
+            this.tfdMdp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnConnexion_KeyDown);
             // 
             // lblMdp
             // 
@@ -109,14 +106,12 @@ namespace gsb_application
             // 
             // tfdLogin
             // 
+            this.tfdLogin.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tfdLogin.Location = new System.Drawing.Point(113, 136);
             this.tfdLogin.Name = "tfdLogin";
             this.tfdLogin.Size = new System.Drawing.Size(100, 20);
             this.tfdLogin.TabIndex = 0;
-
-            //pour écouter les événements des touches (connexion par la touche entrer du clavier)
-            this.tfdLogin.KeyDown += new KeyEventHandler(this.btnConnexion_KeyDown);
-
+            this.tfdLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnConnexion_KeyDown);
             // 
             // frmConnect
             // 
@@ -129,6 +124,7 @@ namespace gsb_application
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "frmConnect";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion";
             this.panel1.ResumeLayout(false);

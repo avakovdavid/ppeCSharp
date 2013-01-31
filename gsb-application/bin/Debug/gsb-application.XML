@@ -203,6 +203,16 @@
             le contenu de cette méthode avec l'éditeur de code.
             </summary>
         </member>
+        <member name="T:gsb_application.Aide">
+            <summary>
+            classe qui représente le module d'aide de l'application
+            </summary>
+        </member>
+        <member name="M:gsb_application.Aide.#ctor">
+            <summary>
+            constructeur de la classe
+            </summary>
+        </member>
         <member name="F:gsb_application.Aide.components">
             <summary>
             Variable nécessaire au concepteur.
@@ -311,10 +321,28 @@
             le contenu de cette méthode avec l'éditeur de code.
             </summary>
         </member>
+        <member name="T:gsb_application.statistiqueMateriel">
+            <summary>
+            Classe qui représente le module des statistiques sur les matériels
+            </summary>
+        </member>
         <member name="M:gsb_application.statistiqueMateriel.#ctor">
             <summary>
             Constructeur du module des statistiques sur les matériels 
             </summary>
+        </member>
+        <member name="M:gsb_application.statistiqueMateriel.afficher">
+            <summary>
+            fonction qui permet d'afficher (d'actualiser) le tableau tatistique des matériels 
+            </summary>
+        </member>
+        <member name="M:gsb_application.statistiqueMateriel.anciennete_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui est appellée à chaque fois que l'utilisateur change la valeur de l'ancienneté du matériel. 
+            A partir de cette fonction on appelle la fonction affiche() qui va actualiser toutes les informations dans le tableau
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="F:gsb_application.statistiqueMateriel.components">
             <summary>
@@ -388,6 +416,13 @@
             fonction qui permet d'initialiser certains éléments de l'interface
             </summary>
             <param name="id">identifiant de la personne dont ont souhaite afficher le résumé (-1 dans le cas d'un premier affichage où aucune personne n'est encore choisie)</param>
+        </member>
+        <member name="M:gsb_application.frmResume.btnModifMat_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque le bouton de modification d'un matériel est cliqué. Permet de faire appel à une boite de dialogue pour modifier les données du matériel
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="M:gsb_application.frmResume.btnModifLicDuree_Click(System.Object,System.EventArgs)">
             <summary>
@@ -506,6 +541,16 @@
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
+        </member>
+        <member name="T:gsb_application.StatistiquesDeLapp">
+            <summary>
+            classe qui représente le module concernant les statistiques de l'application 
+            </summary>
+        </member>
+        <member name="M:gsb_application.StatistiquesDeLapp.#ctor">
+            <summary>
+            constructeur de la classe
+            </summary>
         </member>
         <member name="F:gsb_application.StatistiquesDeLapp.components">
             <summary>
@@ -770,6 +815,60 @@
             Méthode requise pour la prise en charge du concepteur - ne modifiez pas
             le contenu de cette méthode avec l'éditeur de code.
             </summary>
+        </member>
+        <member name="T:gsb_application.modifMateriel">
+            <summary>
+            la classe qui remprésente la boite de dialogue pour modifier les données d'un matériel
+            </summary>
+        </member>
+        <member name="F:gsb_application.modifMateriel.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gsb_application.modifMateriel.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gsb_application.modifMateriel.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="F:gsb_application.modifMateriel.frmAppelant">
+            <summary>
+            la fenêtre de consultation des prêts à partir de laquelle on souhaite modifier un matériel. (permet par la suite de faire appel à la methode d'initialisation du résumé pour afficher les modification)
+            </summary>
+        </member>
+        <member name="F:gsb_application.modifMateriel.materiel">
+            <summary>
+            matériel qu'on souhaite modifier
+            </summary>
+        </member>
+        <member name="M:gsb_application.modifMateriel.#ctor(gsb_application.frmResume,System.Int32)">
+            <summary>
+            constructeur de la classe
+            </summary>
+            <param name="frmAppelant">la fenêtre de consultation des prêts à partir de laquelle on souhaite modifier un matériel</param>
+            <param name="id">identifiant du matériel qu'on souhaite modifier</param>
+        </member>
+        <member name="M:gsb_application.modifMateriel.btnAnnul_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque l'utilisateur souhaite fermer la boite de dialogue. Les modifications dans ce cas là ne sont pas prises en compte
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:gsb_application.modifMateriel.btnValider_Click(System.Object,System.EventArgs)">
+            <summary>
+            fonction qui se déclenche lorsque l'utilisateur valide ses modifications. 
+            Si tout est correctement rempli et que les modification ont été prises en compte alors la boite de dialogue est fermée est l'affichage du résumé des prêts est mis à jour (initialisé)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="T:gsb_application.Type_personne">
             <summary>
@@ -1228,10 +1327,11 @@
             </summary>
             <param name="ht">tableau associatif qui contient toutes les données nécessaires</param>
         </member>
-        <member name="M:gsb_application.Mysql.getLesStatMateriel">
+        <member name="M:gsb_application.Mysql.getLesStatMateriel(System.Int32)">
             <summary>
             Getter des matériels qui ont plus de 5 ans d'ancienneté 
             </summary>
+            <param name="nb_annees">nombre d'années d'ancienneté des matériel</param>
             <returns>liste des matériels de plus de 5 ans d'ancienneté</returns>
         </member>
         <member name="M:gsb_application.Mysql.getLesStatLicence">
@@ -1333,6 +1433,12 @@
             <param name="strText">chaine de caractères à crypter</param>
             <returns>chaine cryptée de 32 caractères</returns>
         </member>
+        <member name="M:gsb_application.Mysql.statDeLapp">
+            <summary>
+            focntion qui permet de récupèrer sous forme d'un tableau associatif quelque données statistiques sur l'application : nombre d'utilisateur, d'administrateurs, de matériels ou de licences prêtés
+            </summary>
+            <returns>tableau associatif de type Hashtable contenant les données statistiques</returns>
+        </member>
         <member name="T:gsb_application.MainWindows">
             <summary>
             Classe qui représente la fenêtre principale de l'application
@@ -1416,9 +1522,15 @@
             </summary>
             <returns>personne connectée actuellement sur l'application</returns>
         </member>
+        <member name="M:gsb_application.MainWindows.getInfoConnexion">
+            <summary>
+            Getter pour l'item du menu qui affiche la personne connectée
+            </summary>
+            <returns>l'item de la personne connectée à droit du menu</returns>
+        </member>
         <member name="M:gsb_application.MainWindows.setPersConnect(System.Object)">
             <summary>
-            Setter pour la personne connectée (qui vient de se connecter
+            Setter pour la personne connectée (qui vient de se connecter)
             </summary>
             <param name="p">personne qui vient de se connecter</param>
         </member>

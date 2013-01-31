@@ -319,6 +319,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 326);
             this.Name = "Administration";
+            this.ShowIcon = false;
             this.Text = "Créer un utilisateur";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
